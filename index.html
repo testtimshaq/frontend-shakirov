@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Дмитрий Алексеев — Frontend-разработчик и веб-верстальщик</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="jquery-3.4.1.min.js"></script>
+
+	<!-- Slider Slick — start -->
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+ 	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+ 	<script src="slick/slick.min.js"></script>
+	<!-- Slider Slick — end -->
+
+	<!-- <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="slick/slick.min.js"></script> -->
+	<script src="script.js"></script>
+	<!-- favicon — start -->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/site.webmanifest">
+	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<!-- favicon — end -->
+
+
+</head>
+<body>
+	<!-- Call-me — start -->
+	<div class="call-container">
+		<div class="caller call-container__caller">
+			<h1 class="caller__h1">Заказать звонок</h1>
+			<form action="mail.php" method="POST" class="caller__form">
+				<label class="caller__label">
+				Имя
+				<input type="text" autocomplete="off" name="user_name" class="caller__input_name" required="required" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Иван">
+				</label>
+
+				<label class="caller__label">
+				Фамилия
+				<input type="text" autocomplete="off" name="user_surname" class="caller__input_surname" required="required" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Алексеев">
+				</label>
+
+				<label class="caller__label">
+				Номер телефона
+				<input type="tel" autocomplete="off" name="user_phone" class="caller__input_surname" required="required"
+				pattern="[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;9193366076">
+				<small class="caller__small_phone-number">Формат: 9991124949</small>
+				</label>
+
+				<button id="submit-call" type="submit" class="caller__button_call">Жду звонка</button>
+			</form>
+		</div>
+	</div>
+	<!-- Call-me — end -->
+
+	<!-- Order project — start -->
+	<div class="order-container">
+		<div class="orderer order-container__orderer">
+			<h1 class="orderer__h1">Заказать проект</h1>
+			<form action="mail.php" method="POST" class="orderer__form">
+				<label class="orderer__label">
+				Имя
+				<input type="text" autocomplete="off" name="user_name" class="orderer__input_name" required="required" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Иван">
+				</label>
+
+				<label class="orderer__label">
+				Фамилия
+				<input type="text" autocomplete="off" name="user_surname" class="orderer__input_surname" required="required" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Алексеев">
+				</label>
+
+				<label class="orderer__label">
+				Номер телефона
+				<input type="tel" autocomplete="off" name="user_phone" class="orderer__input_surname" required="required"
+				pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;919-336-60-76">
+				<small class="orderer_small_phone-number">Формат: 999-112-49-49</small>
+				</label>
+
+				<button id="submit-order" type="submit" class="orderer__button_call">Заказать</button>
+			</form>
+		</div>
+	</div>
+	<!-- Order project — end -->
+
+<div class="header header_background_gray">
+	<!-- Information — start -->
+	<div class="information information_fixed-container header__information">
+		<!-- Navigation — start -->
+		<div class="navigation header__navigation">
+			<a href="#my-skills" class="navigation__link_no-decoration">Услуги</a>
+			<a href="#examples" class="navigation__link_border-bottom">Портфолио</a>
+			<a href="#price-tag" class="navigation__link_no-decoration">Стоимость</a>
+			<img src="img/small-menu.png" class="navigation__img_menu-burger" alt="menu-burger">
+			<img src="img/close-menu.png" class="navigation__img_menu-close" alt="menu-close">
+		</div>
+
+		<!-- Navigation — end -->
+
+		<!-- Phone number — start -->
+		<div id="phone-number" class="phone-number header__phone-number">
+			<a href="tel:+74999955577" class="phone-number__tel-link phone-number__tel-link_no-decoration">+7(499)995-55-77</a>
+			<button class="phone-number__button_call button_call">
+					Заказать звонок
+			</button>
+			<img src="img/call-me.png" id="small-call-me" class="phone-number__image_call" alt="small-call-me">
+		</div>
+		<!-- Phone number — end -->
+
+		<!-- Menu burger — start -->
+		<div class="header__navigation-mobile fixed-container">
+			<h3>Меню</h3>
+			<a href="#my-skills" class="navigation-mobile__link_no-decoration">Услуги</a>
+			<a href="#examples" class="navigation-mobile__link_border-bottom">Портфолио</a>
+			<a href="#price-tag" class="navigation-mobile__link_no-decoration">Стоимость</a>
+		</div>
+		<!-- Menu burger — end -->
+
+	</div>
+	<!-- Information — end -->
+</div>
+<!-- Present me — start-->
+<div class="present-me present-me_background_gray">
+	<!-- Animation — start -->
+	<div class="animation present-me__animation">
+		<div class="div-open present-me__div-open">&lt;div&gt;</div>
+		<div class="div-text present-me__div-text">New block</div>
+		<div class="div-close present-me__div-close">&lt;/div&gt;</div>
+		<div class="transform_sharp present-me__transform_sharp burst">#</div>
+		<div class="transform_bracket present-me__transform_bracket burst">{ }</div>
+		<div class="transform_close-tag present-me__transform_close-tag burst">&lt;/&gt;</div>
+	</div>	
+	<!-- Animation — end -->
+
+	<!-- About me — start -->
+	<div class="about about_fixed-container present-me__about">
+		<div class="name present-me__name">
+				Дмитрий Алексеев
+		</div>
+		<div class="description present-me__description">
+				Frontend-разработчик и веб-верстальщик
+		</div>
+		<button class="about__button_action">
+				Узнать больше
+		</button>
+	</div>
+	<!-- About me — end -->
+</div>
+<!-- Present me — end-->
+
+<!-- My skills — start -->
+<div class="my-skills" id="my-skills">
+	<div class="headliner my-skills__headliner">Что я делаю</div>
+	<div class="fixed-container my-skills__fixed-container">
+		<div class="my-skills__annotation_first">
+			<img src="img/image_tools.png" alt="" class="annotation__image">
+			Вёрстка лендинг&mdash;страниц и&nbsp;сайтов любой сложности
+		</div>
+
+		<div class="my-skills__annotation_second">
+			<img src="img/image_responsive.png" alt="" class="annotation__image">
+			Адаптивная вёрстка под все браузеры и&nbsp;устройства
+		</div>
+
+		<div class="my-skills__annotation_third">
+			<img src="img/image_programming.png" alt="" class="annotation__image">
+			Frontend&mdash;разработка и&nbsp;программирование
+		</div>
+
+		<div class="my-skills__annotation_fourth">
+			<img src="img/image_coding.png" alt="" class="annotation__image">
+			Исправление и&nbsp;доработка существующей вёрстки
+		</div>
+	</div>
+	<button class="my-skills__button_action">
+		Узнать стоимость
+	</button>
+</div>
+<!-- My skills — end -->
+
+<!-- Work examples — start-->
+<div class="examples examples_background_gray">
+	<div class="headliner examples__headliner" id="examples">
+		Примеры моих работ
+	</div>
+
+	<div class="album album_fixed-container examples__album">
+		<!-- <img src="img/arrow.png" id="arrow-1" class="pointer" alt="arrow-left">
+		<img src="img/arrow-2.png" id="arrow-2" class="pointer" alt="arrow-right"> -->
+		<div class="photo examples__photo_1">
+			<a href=""><img src="img/news-site.jpg" alt="photo-left" class="photo__link_image"></a>
+			<div class="examples__text-link"><a>Сайт новостного агенства</a></div>
+		</div>
+		<div class="photo examples__photo_2">
+			<a href=""><img src="img/photo-2.jpg" alt="photo-center" class="photo__link_image"></a>
+			<div class="examples__text-link"><a>Сайт магазина детской одежды</a></div>
+		</div>
+		<div class="photo examples__photo_3">
+			<a href=""><img src="img/photo-3.jpg" alt="photo-right" class="photo__link_image"></a>
+			<div class="examples__text-link"><a>Сайт магазина «Рыболов»</a></div>
+		</div>
+		<!-- <div class="photo examples__photo_4">
+			<a href=""><img src="img/photo-1.jpg" alt="photo-left" class="photo__link_image"></a>
+			<div class="examples__text-link"><a>Сайт психолога Веры Антоновой</a></div>
+		</div>
+		<div class="photo examples__photo_5">
+			<a href=""><img src="img/photo-2.jpg" alt="photo-center" class="photo__link_image"></a>
+			<div class="examples__text-link"><a>Сайт магазина детской одежды</a></div>
+		</div>
+		<div class="photo examples__photo_6">
+			<a href=""><img src="img/photo-3.jpg" alt="photo-right" class="photo__link_image"></a>
+			<div class="examples__text-link"><a>Сайт магазина «Рыболов»</a></div>
+		</div> -->
+	</div>
+
+	<!-- <div class="slider examples__slider">
+		<button class="slider__button_left"></button>
+		<button class="slider__button_center"></button>
+		<button class="slider__button_right"></button>				
+	</div> -->
+
+	<button class="examples__button_action" id="order-project">
+	Заказать проект
+	</button>
+
+</div>
+<!-- Work examples — end-->
+
+<!-- Cost — start-->
+<div class="cost" id="cost">
+	<div class="fixed-container cost__fixed-container">
+		<div class="price-tag cost__price-tag" id="price-tag">
+			Адаптивная вёрстка под все устройства и&nbsp;браузеры от&nbsp;1000 рублей всего за&nbsp;4&nbsp;часа.*
+		</div>
+		<div class="details cost__details">
+			* Срок и&nbsp;стоимость могут отличаться от&nbsp;заявленных и&nbsp;рассчитываются индивидуально, в&nbsp;зависимости от&nbsp;сложности задач.
+		</div>
+		
+	</div>
+</div>
+<!-- Cost — end-->
+
+<!-- Footer — start -->
+<div class="footer">
+	<div class="fixed-container footer__fixed-container">
+		<div class="navigation footer__navigation">
+			<a href="#" class="navigation__link">Услуги</a>
+			<a href="#examples" class="navigation__link">Портфолио</a>
+			<a href="#price-tag" class="navigation__link">Стоимость</a>
+		</div>
+
+		<div class="contacts footer__contacts">
+			<a href="tel:+74999955577" id="tel-foot" class="contacts__link_tel">+7(499)995-55-77</a>
+			<a href="mailto:dmitry@alekseev.com" target="_blank" id="post-foot" class="contacts__link_mailto">dmitry@alekseev.com</a>
+		</div>
+
+		<div class="social footer__social">
+			<button class="soccial__button_call button_call">
+				Заказать звонок
+			</button>
+			<div class="sprite footer__sprite">
+			<a href="https://vk.com" target="_blank" class="sprite__link_vk"></a>
+			<a href="https://fb.com" target="_blank" class="sprite__link_fb"></a>
+			<a href="https://twitter.com" target="_blank" class="sprite__link_tw"></a>
+			<a href="https://instagram.com" target="_blank" class="sprite__link_in"></a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Footer — end -->
+
+<!-- Copyright — start -->
+<div class="copyright">
+	<div class="fixed-container copyright__fixed-container">
+		© Алекс Албанов, 2019 – 2020
+	</div>
+</div>
+<!-- Copyright — end -->
+
+</body>
+</html>
