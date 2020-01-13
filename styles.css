@@ -1341,7 +1341,7 @@ a[class^="sprite__link"] {
 					color: #ff8f5a;
 					display: none;
 					transform-origin: 0 0 0;
-					transform: translateX(400px) translateY(-200px);
+					transform: translateX(310px) translateY(-200px);
 				}
 				1% {display: block;
 				}
@@ -1396,7 +1396,7 @@ a[class^="sprite__link"] {
 					color: #ff8f5a;
 					display: none;
 					transform-origin: 0 0 0;
-					transform: translateX(300px) translateY(300px);
+					transform: translateX(0px) translateY(300px);
 				}
 				1% {display: block;
 				}
