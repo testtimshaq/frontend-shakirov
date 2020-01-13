@@ -1317,7 +1317,25 @@ a[class^="sprite__link"] {
 	.cost__animation {
 		display: none;
 	}
-	
+	.transform_bracket.burst {
+		font-size: 25px;
+		transform: rotate(20deg) translateX(-70px) translateY(-380px);
+	}
+	.transform_sharp.burst {
+		font-size: 28px;
+		transform: rotate(20deg) translateX(0px) translateY(-200px);
+	}
+	.present-me__transform_close-tag.burst {
+		font-size: 18px;
+		transform: rotate(-20deg) translateX(420px) translateY(-270px);
+	}
+	.present-me__transform_close-tag_clone {
+		display: none;
+	}
+	.present-me__div-text, .present-me__div-open,
+	.present-me__div-close {
+		font-size: 16px;
+	}
 	@keyframes move-1 {
 				from {
 					color: #ff8f5a;
@@ -1329,7 +1347,7 @@ a[class^="sprite__link"] {
 				}
   				85% {
   					color: #ff2f96;
-					transform: translateX(50px) translateY(-40px);
+					transform: translateX(108px) translateY(-300px);
   				}
 				97% {
   					color: #ff2f96;
@@ -1342,18 +1360,18 @@ a[class^="sprite__link"] {
 				}
   				to {
   					color: transparent;
-					transform: translateX(50px) translateY(-40px);
+					transform: translateX(108px) translateY(-300px);
   				}
 		}
 		@keyframes move-block {
 				from {
 					color: transparent;
 					transform-origin: 0 0 0;
-					transform: translateX(110px) translateY(-40px);
+					transform: translateX(160px) translateY(-300px);
 				}
 				85% {
 					color: transparent;
-					transform: translateX(110px) translateY(-40px);
+					transform: translateX(160px) translateY(-300px);
 				}
 				86% {
   					color: #ff2f96;
@@ -1370,7 +1388,7 @@ a[class^="sprite__link"] {
 				}
   				to {
   					color: transparent;
-					transform: translateX(110px) translateY(-40px);
+					transform: translateX(160px) translateY(-300px);
   				}
 		}
 		@keyframes move-2 {
@@ -1384,7 +1402,7 @@ a[class^="sprite__link"] {
 				}
 				85% {
   					color: #ff2f96;
-					transform: translateX(228px) translateY(-40px);
+					transform: translateX(278px) translateY(-300px);
 				}
 				97% {
   					color: #ff2f96;
@@ -1397,7 +1415,7 @@ a[class^="sprite__link"] {
 				}
   				to {
   					color: transparent;
-					transform: translateX(228px) translateY(-40px);
+					transform: translateX(278px) translateY(-300px);
   				}
 }
 }
