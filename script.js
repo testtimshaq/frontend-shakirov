@@ -1,9 +1,11 @@
 $(function(){
 
 	// Burst tags — start
-	$(document).ready(function(){
- 	$('.burst').removeClass('burst');
-	});
+
+	// $(document).ready(function(){
+ // 	$('.burst').removeClass('burst');
+	// });
+
 	// Burst tags — end
 
 	// Anchors — start
@@ -70,12 +72,25 @@ $(function(){
 
 	// Slider Slick — start
 	var mql = window.matchMedia('all and (max-width: 1366px)');
-	var mql2 = window.matchMedia('all and (max-width: 800px)');
-	
-	if (mql2.matches) {
+	var mql2 = window.matchMedia('all and (max-width: 1024px)');
+	var mql3 = window.matchMedia('all and (max-width: 800px)');
+
+	if (mql3.matches) {
     // размер окна 800px или меньше
     	$('.examples__album').slick({
 		slidesToShow: 1,
+		infinite: true,
+		slidesToScroll: 1,
+		autoplay: false,
+		autoplaySpeed: 2000,
+		dots: true,
+		arrows: false,
+	});
+	} else {
+	if (mql2.matches) {
+    // размер окна 1024px или меньше
+    	$('.examples__album').slick({
+		slidesToShow: 2,
 		infinite: true,
 		slidesToScroll: 1,
 		autoplay: false,
@@ -106,6 +121,7 @@ $(function(){
 		dots: false,
 		arrows: true,
 	});
+	}
 	}
 	}
 

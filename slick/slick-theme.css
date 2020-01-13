@@ -196,9 +196,10 @@
     opacity: 1;
     color: #ff4e2e;
 }
-@media (max-width: 380px) {
+@media (max-width: 800px) {
     .slick-dots
 {
-    margin: -25px auto;
+    margin: -55px auto;
+    position: relative;
 }
 }
