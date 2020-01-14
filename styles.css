@@ -81,7 +81,8 @@
 			height: 450px;
 			border-radius: 60px 30px 15px;
 			background-image: linear-gradient(to top right, #ff8f5a, #ff2f96);
-			margin: 20px auto 0 auto;
+			padding: 20px;
+			margin: 40px auto;
 			color: white;
 		}
 		.caller__h1, .orderer__h1 {
@@ -230,6 +231,7 @@ img[class$="call"] {
 .about {
 	display: flex;
 	flex-direction: column;
+	position: relative;
 }
 .name {
 	font-size: 80px;
@@ -528,7 +530,7 @@ a[class^="sprite__link"] {
 			font-size: 20px;
 		}
 		div[class*="present-me__transform"] {
-			width: 50px;
+			width: 90px;
 			margin: 0;
 			transform-origin: 0 0 0;
 			background: linear-gradient(to top, #ff8f5a, #ff2f96);
@@ -538,34 +540,44 @@ a[class^="sprite__link"] {
 			font-weight: bold;
 			transition: transform 2s;
 		}
-		.present-me__transform_sharp.burst {
-			transform: rotate(20deg) translateX(1000px) translateY(-450px);
-			font-size: 50px;
-		}
 		.present-me__transform_sharp {
+			transform: rotate(20deg);
 			font-size: 50px;
-			transform: translateX(0px) translateY(-700px);
-		}
-		.present-me__transform_bracket.burst {
-			transform: rotate(20deg) translateX(0px) translateY(-450px);
-			font-size: 50px;
+			position: absolute;
+			top: 20%;
+			left: -8%;
 		}
 		.present-me__transform_bracket {
+			transform: rotate(20deg);
 			font-size: 50px;
-			transform: translateX(250px) translateY(-700px);
-		}
-		.present-me__transform_close-tag.burst {
-			transform: rotate(-30deg) translateX(300px) translateY(250px);
-			font-size: 35px;
+			position: absolute;
+			top: -80%;
+			left: -18%;
 		}
 		.present-me__transform_close-tag {
 			font-size: 35px;
-			transform: translateX(0px) translateY(-700px);
+			transform: rotate(20deg);
+			position: absolute;
+			bottom: -60%;
 		}
 		.present-me__transform_close-tag_clone {
 			display: none;
 		}
-		@keyframes move-1 {
+		.present-me__transform_div{
+			font-size: 37px;
+			transform: rotate(20deg);
+			position: absolute;
+			bottom: -10%;
+			left: 50%
+		}
+		.present-me__transform_div_clone{
+			font-size: 29px;
+			transform: rotate(-20deg);
+			position: absolute;
+			top: -45%;
+			left: 34%
+		}
+		/*@keyframes move-1 {
 				from {
 					color: #ff8f5a;
 					display: none;
@@ -646,7 +658,7 @@ a[class^="sprite__link"] {
   					color: transparent;
 					transform: translateX(928px) translateY(-350px);
   				}
-		}
+		}*/
 		
 		/*Animation, transformation*/
 
@@ -658,24 +670,41 @@ a[class^="sprite__link"] {
 			color: white;
 		}
 		.cost__transform_sharp {
-			transform: rotate(20deg) translateX(-100px) translateY(120px);
+			transform: rotate(20deg);
 			font-size: 50px;
+			position: absolute;
+			top: 90%;
+			left: -5%;
 		}
 		.cost__transform_bracket {
-			transform: rotate(20deg) translateX(-300px) translateY(-70px);
+			transform: rotate(20deg);
 			font-size: 50px;
+			position: absolute;
+			top: -30%;
+			left: -10%;
 		}
 		.cost__transform_bracket_clone {
-			transform: rotate(-20deg) translateX(1200px) translateY(450px);
+			transform: rotate(-20deg);
 			font-size: 50px;
+			position: absolute;
+			top: 90%;
+			right: -5%;
 		}
 		.cost__transform_close-tag {
-			transform: rotate(-30deg) translateX(1200px) translateY(450px);
+			transform: rotate(-30deg);
 			font-size: 35px;
+			position: absolute;
+			right: 0;
 		}
 		.cost__transform_div-open {
-			transform: rotate(25deg) translateX(900px) translateY(-200px);
+			transform: rotate(25deg);
 			font-size: 35px;
+			position: absolute;
+			top: 90%;
+			right: 20%;
+		}
+		.cost__fixed-container {
+			position: relative;
 		}
 		/*Cost transform — end*/
 
@@ -686,100 +715,6 @@ a[class^="sprite__link"] {
 	.present-me {
 		background-position: 120% bottom;
 	}
-	.transform_sharp.burst {
-			transform: rotate(20deg) translateX(600px) translateY(-200px);
-			font-size: 50px;
-		}
-	.transform_bracket.burst {
-			transform: rotate(-20deg) translateX(100px) translateY(25px);
-			font-size: 50px;
-		}
-	.transform_close-tag.burst {
-			transform: rotate(-30deg) translateX(0px) translateY(90px);
-			font-size: 35px;
-		}
-		@keyframes move-1 {
-				from {
-					color: #ff8f5a;
-					display: none;
-					transform-origin: 0 0 0;
-					transform: translateX(400px) translateY(-200px);
-				}
-				1% {display: block;
-				}
-  				85% {
-  					color: #ff2f96;
-					transform: translateX(470px) translateY(0px);
-  				}
-				97% {
-  					color: #ff2f96;
-				}
-				98% {
-  					color: transparent;
-				}
-				99% {
-  					color: #ff2f96;
-				}
-  				to {
-  					color: transparent;
-					transform: translateX(470px) translateY(0px);
-  				}
-		}
-		@keyframes move-block {
-				from {
-					color: transparent;
-					transform-origin: 0 0 0;
-					transform: translateX(530px) translateY(0px);
-				}
-				85% {
-					color: transparent;
-					transform: translateX(530px) translateY(0px);
-				}
-				86% {
-  					color: #ff2f96;
-				}
-				97% {
-  					background-color: transparent;
-  					color: #ff2f96;
-				}
-				98% {
-  					color: transparent;
-				}
-				99% {
-  					color: #ff2f96;
-				}
-  				to {
-  					color: transparent;
-					transform: translateX(530px) translateY(0px);
-  				}
-		}
-		@keyframes move-2 {
-				from {
-					color: #ff8f5a;
-					display: none;
-					transform-origin: 0 0 0;
-					transform: translateX(300px) translateY(300px);
-				}
-				1% {display: block;
-				}
-				85% {
-  					color: #ff2f96;
-					transform: translateX(648px) translateY(0px);
-				}
-				97% {
-  					color: #ff2f96;
-				}
-				98% {
-  					color: transparent;
-				}
-				99% {
-  					color: #ff2f96;
-				}
-  				to {
-  					color: transparent;
-					transform: translateX(648px) translateY(0px);
-  				}
-		}
 	/*#arrow-1 {
 	left: 7%;
 	}
@@ -806,90 +741,21 @@ a[class^="sprite__link"] {
 	.name {
 		font-size: 65px;
 	}
-		@keyframes move-1 {
-				from {
-					color: #ff8f5a;
-					display: none;
-					transform-origin: 0 0 0;
-					transform: translateX(400px) translateY(-200px);
-				}
-				1% {display: block;
-				}
-  				85% {
-  					color: #ff2f96;
-					transform: translateX(320px) translateY(0px);
-  				}
-				97% {
-  					color: #ff2f96;
-				}
-				98% {
-  					color: transparent;
-				}
-				99% {
-  					color: #ff2f96;
-				}
-  				to {
-  					color: transparent;
-					transform: translateX(320px) translateY(0px);
-  				}
-		}
-		@keyframes move-block {
-				from {
-					color: transparent;
-					transform-origin: 0 0 0;
-					transform: translateX(380px) translateY(0px);
-				}
-				85% {
-					color: transparent;
-					transform: translateX(380px) translateY(0px);
-				}
-				86% {
-  					color: #ff2f96;
-				}
-				97% {
-  					background-color: transparent;
-  					color: #ff2f96;
-				}
-				98% {
-  					color: transparent;
-				}
-				99% {
-  					color: #ff2f96;
-				}
-  				to {
-  					color: transparent;
-					transform: translateX(380px) translateY(0px);
-  				}
-		}
-		@keyframes move-2 {
-				from {
-					color: #ff8f5a;
-					display: none;
-					transform-origin: 0 0 0;
-					transform: translateX(300px) translateY(300px);
-				}
-				1% {display: block;
-				}
-				85% {
-  					color: #ff2f96;
-					transform: translateX(498px) translateY(0px);
-				}
-				97% {
-  					color: #ff2f96;
-				}
-				98% {
-  					color: transparent;
-				}
-				99% {
-  					color: #ff2f96;
-				}
-  				to {
-  					color: transparent;
-					transform: translateX(498px) translateY(0px);
-  				}
-		}
-
+	.name {
+		font-size: 54px;
+		font-weight: bold;
+	}
 }
+@media (max-width: 1245px) {
+	.present-me {
+	background-position: 190% bottom;
+	}
+}
+@media (max-width: 1160px) {
+
+	
+}
+
 /*Ноутбук — конец*/
 
 /*Планшет — начало*/
@@ -913,10 +779,6 @@ a[class^="sprite__link"] {
 	.phone-number {
 		width: 60%;
 		justify-content: normal;
-	}
-	.name {
-		font-size: 54px;
-		font-weight: bold;
 	}
 	.examples {
 		height: 1050px;
@@ -956,120 +818,53 @@ a[class^="sprite__link"] {
 	.my-skills__annotation_first, .my-skills__annotation_second {
 		margin-bottom: 85px;
 	}
-	@keyframes move-1 {
-				from {
-					color: #ff8f5a;
-					display: none;
-					transform-origin: 0 0 0;
-					transform: translateX(100px) translateY(-400px);
-				}
-				1% {display: block;
-				}
-  				85% {
-  					color: #ff2f96;
-					transform: translateX(250px) translateY(-300px);
-  				}
-				97% {
-  					color: #ff2f96;
-				}
-				98% {
-  					color: transparent;
-				}
-				99% {
-  					color: #ff2f96;
-				}
-  				to {
-  					color: transparent;
-					transform: translateX(250px) translateY(-300px);
-  				}
-		}
-		@keyframes move-block {
-				from {
-					color: transparent;
-					transform-origin: 0 0 0;
-					transform: translateX(310px) translateY(-300px);
-				}
-				85% {
-					color: transparent;
-					transform: translateX(310px) translateY(-300px);
-				}
-				86% {
-  					color: #ff2f96;
-				}
-				97% {
-  					background-color: transparent;
-  					color: #ff2f96;
-				}
-				98% {
-  					color: transparent;
-				}
-				99% {
-  					color: #ff2f96;
-				}
-  				to {
-  					color: transparent;
-					transform: translateX(310px) translateY(-300px);
-  				}
-		}
-		@keyframes move-2 {
-				from {
-					color: #ff8f5a;
-					display: none;
-					transform-origin: 0 0 0;
-					transform: translateX(300px) translateY(250px);
-				}
-				1% {display: block;
-				}
-				85% {
-  					color: #ff2f96;
-					transform: translateX(428px) translateY(-300px);
-				}
-				97% {
-  					color: #ff2f96;
-				}
-				98% {
-  					color: transparent;
-				}
-				99% {
-  					color: #ff2f96;
-				}
-  				to {
-  					color: transparent;
-					transform: translateX(428px) translateY(-300px);
-  				}
-		}
-		.transform_bracket.burst {
-			transform: rotate(20deg) translateX(-50px) translateY(-480px);
-		}
-		.transform_sharp.burst {
-			transform: rotate(20deg) translateX(100px) translateY(100px);
-		}
-		.present-me__transform_close-tag.burst {
-			transform: rotate(20deg) translateX(300px) translateY(-170px);
-		}
-		.present-me__transform_close-tag_clone {
-			display: block;
-			font-size: 30px;
-			transform: rotate(-25deg) translateX(1050px) translateY(-150px);
-		}
+	.present-me__transform_div {
+		display: none;
+	}
+	.present-me__transform_div_clone {
+		top: -90%;
+		left: 80%;
+	}
+	.present-me__transform_close-tag_clone {
+		display: block;
+		transform: rotate(-20deg);
+		font-size: 27px;
+		position: absolute;
+		bottom: -40%;
+		left: 30%;
+	}
+	.present-me__transform_close-tag {
+		bottom: 120%;
+		left: 40%;
+	}
+	.present-me__transform_sharp {
+		top: 130%;
+		left: 3%;
+	}
+	.present-me__transform_bracket {
+		left: 6%;
+	}
 
-		.cost__transform_div-open {
-    		transform: rotate(25deg) translateX(500px) translateY(0px);
-    		font-size: 25px;
-		}
-		.cost__transform_sharp {
-			display: none;
-		}
-		.cost__transform_bracket_clone {
-			display: none;
-		}
-		.cost__transform_bracket {
-   			transform: rotate(20deg) translateX(70px) translateY(-125px);
-    		font-size: 30px;
-		}
-		.cost__transform_close-tag {
-    		transform: rotate(-30deg) translateX(680px) translateY(550px);
-		}
+	.cost__transform_div-open {
+		font-size: 25px;
+		top: 100%;
+		right: 50%;
+	}
+	.cost__transform_sharp {
+		display: none;
+	}
+	.cost__transform_bracket {
+		font-size: 30px;
+		top: -30%;
+		left: 15%;
+	}
+	.cost__transform_bracket_clone {
+		display: none;
+	}
+	.cost__transform_close-tag {
+		right: 15%;
+		top: 100%;
+	}
 }
 /*Планшет — конец*/
 
@@ -1104,10 +899,18 @@ a[class^="sprite__link"] {
 		width: 100%;
 		font-size: 16px;
 	}
+	.present-me__transform_div_clone {
+		top: -115%;
+		left: 90%;
+	}
+
 }
 @media (max-width: 800px) {
 	div[class*="fixed-container"] {
 		width: 320px;
+	}
+	div[class*="present-me__div"] {
+		display: none;
 	}
 	.photo_left {
 		display: none;
@@ -1241,21 +1044,7 @@ a[class^="sprite__link"] {
 		align-self: flex-end;
 	}
 
-	.transform_bracket.burst {
-		font-size: 25px;
-		transform: rotate(20deg) translateX(-70px) translateY(-520px);
-	}
-	.transform_sharp.burst {
-		font-size: 28px;
-		transform: rotate(20deg) translateX(150px) translateY(-250px);
-	}
-	.present-me__transform_close-tag.burst {
-		font-size: 18px;
-		transform: rotate(-20deg) translateX(700px) translateY(-300px);
-	}
-	.present-me__transform_close-tag_clone {
-		display: none;
-	}
+	
 	button[class$="action"] {
 		margin: 50px auto 50px auto;
 	}
@@ -1288,24 +1077,50 @@ a[class^="sprite__link"] {
 	.album {
 		height: 400px;
 	}
+	.present-me__transform_sharp {
+		top: -70%;
+		left: -20%;
+	}
+	.present-me__transform_bracket {
+		top: -180%;
+		left: -16%;
+	}
+	.present-me__transform_close-tag {
+		display: none;
+	}
+	.present-me__transform_close-tag_clone {
+		bottom: 190%;
+		left: -10%;
+	}
+	.present-me__transform_div_clone {
+		top: -185%;
+		left: 90%;
+		font-size: 20px;
+	}
 	.cost__transform_bracket {
-		transform: rotate(20deg) translateX(-150px) translateY(-25px);
+		top: 0%;
+		left: -30%;
 	}
-
+	.cost__transform_close-tag {
+		top: 10%;
+		right: -40%;
+	}
+	.cost__transform_div-open {
+		font-size: 20px;
+		top: 100%;
+		right: -10%;
+	}
+	.cost__transform_sharp {
+		display: block;
+		font-size: 18px;
+		top: 90%;
+		left: -25%;
+	}
 }
-/*Маленький планшет — начало*/
-
-/*Мобильный — начало*/
-@media (max-width: 384px) {
-	.orderer, .caller {
-		margin: 3%;
-	}
-	div[class*="fixed-container"] {
-		width: 280px;
-	}
+@media (max-width: 600px) {
 	.present-me {
 		height: 600px;
-		background-position: 70px 90px;
+		background-position: center 90px;
 	    background-size: 330px;
 	}
 	.information  {
@@ -1317,106 +1132,40 @@ a[class^="sprite__link"] {
 	.cost__animation {
 		display: none;
 	}
-	.transform_bracket.burst {
+	.present-me__transform_sharp {
+		left: 0%;
 		font-size: 25px;
-		transform: rotate(20deg) translateX(-70px) translateY(-380px);
 	}
-	.transform_sharp.burst {
-		font-size: 28px;
-		transform: rotate(20deg) translateX(0px) translateY(-200px);
-	}
-	.present-me__transform_close-tag.burst {
-		font-size: 18px;
-		transform: rotate(-20deg) translateX(420px) translateY(-270px);
+	.present-me__transform_bracket {
+		top: -130%;
+		left: 10%;
+		font-size: 30px;
 	}
 	.present-me__transform_close-tag_clone {
-		display: none;
+		bottom: 210%;
+		left: 40%;
+		font-size: 20px;
 	}
-	.present-me__div-text, .present-me__div-open,
-	.present-me__div-close {
-		font-size: 16px;
+	.present-me__transform_div_clone {
+		top: -125%;
+		left: 70%;
 	}
-	@keyframes move-1 {
-				from {
-					color: #ff8f5a;
-					display: none;
-					transform-origin: 0 0 0;
-					transform: translateX(310px) translateY(-200px);
-				}
-				1% {display: block;
-				}
-  				85% {
-  					color: #ff2f96;
-					transform: translateX(108px) translateY(-300px);
-  				}
-				97% {
-  					color: #ff2f96;
-				}
-				98% {
-  					color: transparent;
-				}
-				99% {
-  					color: #ff2f96;
-				}
-  				to {
-  					color: transparent;
-					transform: translateX(108px) translateY(-300px);
-  				}
-		}
-		@keyframes move-block {
-				from {
-					color: transparent;
-					transform-origin: 0 0 0;
-					transform: translateX(160px) translateY(-300px);
-				}
-				85% {
-					color: transparent;
-					transform: translateX(160px) translateY(-300px);
-				}
-				86% {
-  					color: #ff2f96;
-				}
-				97% {
-  					background-color: transparent;
-  					color: #ff2f96;
-				}
-				98% {
-  					color: transparent;
-				}
-				99% {
-  					color: #ff2f96;
-				}
-  				to {
-  					color: transparent;
-					transform: translateX(160px) translateY(-300px);
-  				}
-		}
-		@keyframes move-2 {
-				from {
-					color: #ff8f5a;
-					display: none;
-					transform-origin: 0 0 0;
-					transform: translateX(0px) translateY(300px);
-				}
-				1% {display: block;
-				}
-				85% {
-  					color: #ff2f96;
-					transform: translateX(278px) translateY(-300px);
-				}
-				97% {
-  					color: #ff2f96;
-				}
-				98% {
-  					color: transparent;
-				}
-				99% {
-  					color: #ff2f96;
-				}
-  				to {
-  					color: transparent;
-					transform: translateX(278px) translateY(-300px);
-  				}
+	
 }
+/*Маленький планшет — начало*/
+
+/*Мобильный — начало*/
+@media (max-width: 384px) {
+	div[class*="fixed-container"] {
+		width: 280px;
+	}
+	.present-me {
+		height: 600px;
+		background-position: 70px 90px;
+	    background-size: 330px;
+	}	
+	.present-me__transform_sharp {
+		left: 10%;
+	}
 }
 /*Мобильный — конец*/
