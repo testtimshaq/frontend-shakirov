@@ -5,7 +5,7 @@ $mail = new PHPMailer;
 $mail->CharSet = 'utf-8';
 
 $name = $_POST['user_name'];
-$mail = $_POST['user_mail'];
+$email = $_POST['user_mail'];
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
@@ -28,7 +28,7 @@ $mail->addAddress('timur53shakirov@mail.ru');     // Кому будет ухо�
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = 'Узнать больше';
-$mail->Body    = '' .$name . ' оставил заявку, его мэйл — ' .$mail;
+$mail->Body    = '' .$name . ' оставил заявку, его мэйл — ' .$email;
 $mail->AltBody = '';
 
 if(!$mail->send()) {
