@@ -120,3 +120,8 @@
     display: flex;
     font-size: 18px;
 }*/
+/*@media (max-width: 800px) {
+.slick-track {
+    transform: translate3d(-235px, 0px, 0px);
+}
+}*/
