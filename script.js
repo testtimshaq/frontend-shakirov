@@ -19,7 +19,7 @@ $(function(){
 
 	// More information — start
 		// Узнать больше
-	$(".button_call").click(function(){
+	$(".about__button_action").click(function(){
 		$(".inform-container").fadeIn(400)
 
 	});
