@@ -5,7 +5,6 @@ $mail = new PHPMailer;
 $mail->CharSet = 'utf-8';
 
 $name = $_POST['user_name'];
-$surname = $_POST['user_surname'];
 $phone = $_POST['user_phone'];
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
@@ -29,7 +28,7 @@ $mail->addAddress('timur53shakirov@mail.ru');     // Кому будет ухо�
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = 'Заказ звонка';
-$mail->Body    = '' .$name .$surname . ' оставил заявку, его телефон ' .$phone;
+$mail->Body    = '' .$name . ' оставил заявку, его телефон ' .$phone;
 $mail->AltBody = '';
 
 if(!$mail->send()) {

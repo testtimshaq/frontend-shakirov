@@ -80,12 +80,20 @@
 		.caller, .orderer,
 		.informer {
 			width: 300px;
-			height: 450px;
+			height: 350px;
 			border-radius: 60px 30px 15px;
 			background-image: linear-gradient(to top right, #ff8f5a, #ff2f96);
 			padding: 20px;
 			margin: 40px auto;
 			color: white;
+			position: relative;
+		}
+		.caller img, .orderer img,
+		.informer img {
+			width: 20px;
+    		position: absolute;
+    		top: 20px;
+    		right: 20px;
 		}
 		.caller__h1, .orderer__h1,
 		.informer__h1 {
@@ -273,7 +281,7 @@ button[class$="action"] {
 /*Menu burger — start*/
 .header__navigation-mobile {
 	height: 220px;
-	background-color: #fbfbfb95;
+	background-color: #fbfbfb;
 	display: none;
 	flex-direction: column;
 	position: absolute;

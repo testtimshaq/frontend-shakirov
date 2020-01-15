@@ -29,6 +29,10 @@ $(function(){
 			$(this).fadeOut(400);
 		}
 	})
+
+	$('.informer__image').click(function(event){
+		$(".inform-container").fadeOut(400);
+	})
 		// Узнать стоимость
 	$(".my-skills__button_action").click(function(){
 		$(".inform-container").fadeIn(400)
@@ -40,7 +44,11 @@ $(function(){
 			$(this).fadeOut(400);
 		}
 	})
-	// More information — start
+
+	$('.informer__image').click(function(event){
+		$(".inform-container").fadeOut(400);
+	})
+	// More information — end
 
 	// Menu burger — start
 	$('.navigation__img_menu-burger')
@@ -69,6 +77,10 @@ $(function(){
 		}
 	})
 
+	$('.caller__image').click(function(event){
+		$(".call-container").fadeOut(400);
+	})
+
 	// Call-me img
 	$("#small-call-me").click(function(){
 		$(".call-container").fadeIn(400)
@@ -92,6 +104,10 @@ $(function(){
 		if(event.target == this) {
 			$(this).fadeOut(400);
 		}
+	})
+
+	$('.orderer__image').click(function(event){
+		$(".order-container").fadeOut(400);
 	})
 	// Order-project button — end
 

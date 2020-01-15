@@ -34,15 +34,11 @@
 	<div class="call-container">
 		<div class="caller call-container__caller">
 			<h1 class="caller__h1">Заказать звонок</h1>
+			<img src="img/close-form.png" class="caller__image">
 			<form action="mail.php" method="POST" class="caller__form">
 				<label class="caller__label">
-				Имя
-				<input type="text" autocomplete="off" name="user_name" class="caller__input_name" required="required" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Иван">
-				</label>
-
-				<label class="caller__label">
-				Фамилия
-				<input type="text" autocomplete="off" name="user_surname" class="caller__input_surname" required="required" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Алексеев">
+				Имя, Фамилия
+				<input type="text" autocomplete="off" name="user_name" class="caller__input_name" required="required" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Дмитрий Алексеев">
 				</label>
 
 				<label class="caller__label">
@@ -62,15 +58,11 @@
 	<div class="order-container">
 		<div class="orderer order-container__orderer">
 			<h1 class="orderer__h1">Заказать проект</h1>
+			<img src="img/close-form.png" class="orderer__image">
 			<form action="mail.php" method="POST" class="orderer__form">
 				<label class="orderer__label">
-				Имя
+				Имя, Фамилия
 				<input type="text" autocomplete="off" name="user_name" class="orderer__input_name" required="required" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Иван">
-				</label>
-
-				<label class="orderer__label">
-				Фамилия
-				<input type="text" autocomplete="off" name="user_surname" class="orderer__input_surname" required="required" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Алексеев">
 				</label>
 
 				<label class="orderer__label">
@@ -89,16 +81,12 @@
 	<!-- More information — start -->
 	<div class="inform-container">
 		<div class="informer inform-container__informer">
-			<h1 class="informer__h1">Подробная информация</h1>
+			<h1 class="informer__h1">Узнать больше</h1>
+			<img src="img/close-form.png" class="informer__image">
 			<form action="mail-inform.php" method="POST" class="informer__form">
 				<label class="informer__label">
-				Имя
-				<input type="text" autocomplete="off" name="user_name" class="informer__input_name" required="required" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Иван">
-				</label>
-
-				<label class="informer__label">
-				Фамилия
-				<input type="text" autocomplete="off" name="user_surname" class="informer__input_surname" required="required" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Алексеев">
+				Имя, Фамилия
+				<input type="text" autocomplete="off" name="user_name" class="informer__input_name" required="required" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Иван Алексеев">
 				</label>
 
 				<label class="informer__label">
@@ -106,7 +94,7 @@
 				<input type="email" autocomplete="off" name="user_mail" class="informer__input_surname" required="required" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;mail@mail.ru">
 				</label>
 
-				<button id="submit-informer" type="submit" class="orderer__button_call">Узнать больше</button>
+				<button id="submit-informer" type="submit" class="orderer__button_call">Жду письма</button>
 			</form>
 		</div>
 	</div>
