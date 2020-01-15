@@ -21,6 +21,7 @@ $(function(){
 		// Узнать больше
 	$(".about__button_action").click(function(){
 		$(".inform-container").fadeIn(400)
+		$(".inform-container").css({"display": "flex"})
 
 	});
 
@@ -36,6 +37,7 @@ $(function(){
 		// Узнать стоимость
 	$(".my-skills__button_action").click(function(){
 		$(".inform-container").fadeIn(400)
+		$(".inform-container").css({"display": "flex"})
 
 	});
 
@@ -68,6 +70,7 @@ $(function(){
 	// Call-me button — start
 	$(".button_call").click(function(){
 		$(".call-container").fadeIn(400)
+		$(".call-container").css({"display": "flex"})
 
 	});
 
@@ -84,6 +87,7 @@ $(function(){
 	// Call-me img
 	$("#small-call-me").click(function(){
 		$(".call-container").fadeIn(400)
+		$(".call-container").css({"display": "flex"})
 
 	});
 
@@ -97,6 +101,7 @@ $(function(){
 	// Order-project button — start
 	$("#order-project").click(function(){
 		$(".order-container").fadeIn(400)
+		$(".order-container").css({"display": "flex"})
 
 	});
 
