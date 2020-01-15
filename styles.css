@@ -68,7 +68,8 @@
 /*IconFont — end*/
 
 		/*call-me*/
-		.call-container, .order-container {
+		.call-container, .order-container,
+		.inform-container {
 			display: none;
 			background-color: #00000060;
 			width: 100%;
@@ -76,7 +77,8 @@
 			position: fixed;
 			z-index: 12;
 		}
-		.caller, .orderer {
+		.caller, .orderer,
+		.informer {
 			width: 300px;
 			height: 450px;
 			border-radius: 60px 30px 15px;
@@ -85,13 +87,15 @@
 			margin: 40px auto;
 			color: white;
 		}
-		.caller__h1, .orderer__h1 {
+		.caller__h1, .orderer__h1,
+		.informer__h1 {
 			width: 255px;
 			margin: 0 auto;
 			padding: 30px 0 10px 0;
 			border-bottom: 1px solid white;
 		}
-		.caller__form, .orderer__form {
+		.caller__form, .orderer__form,
+		.informer__form {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -105,6 +109,10 @@
 			width: 255px;
 			margin: 10px auto 5px auto;
 		}
+		.informer__form * {
+			width: 255px;
+			margin: 10px auto 5px auto;
+		}
 		input[class^="caller__input"] {
 			border: 1px solid gray;
 			height: 30px;
@@ -115,7 +123,13 @@
 			height: 30px;
 			border-radius: 40px;
 		}
-		#submit-call, #submit-order {
+		input[class^="informer__input"] {
+			border: 1px solid gray;
+			height: 30px;
+			border-radius: 40px;
+		}
+		#submit-call, #submit-order,
+		#submit-informer {
 			font-size: 20px;
 			font-weight: bold;
 			margin: 20px auto 0 auto;
@@ -259,11 +273,12 @@ button[class$="action"] {
 /*Menu burger — start*/
 .header__navigation-mobile {
 	height: 220px;
-	background-color: #fbfbfb;
+	background-color: #fbfbfb95;
 	display: none;
 	flex-direction: column;
 	position: absolute;
 	top: 70px;
+	z-index: 13;
 }
 .header__navigation-mobile h3 {
 	align-self: center;
@@ -422,6 +437,9 @@ div[class*="examples__photo"] {
 	display: flex;
 	flex-direction: column;
 }
+.contacts h4 {
+	margin: 0;
+}
 a[class^="contacts__link"] {
 	text-decoration: none;
 	color: #8993ad;
@@ -452,8 +470,13 @@ a[class^="contacts__link"] {
 	display: flex;
 	flex-direction: column;
 }
+.social__h4_no-decoration {
+	text-decoration: none;
+	color: #8993ad;
+	margin: 0;
+}
 .sprite {
-	margin-top: 40px;
+	margin-top: 10px;
 }
 a[class^="sprite__link"] {
 	background-image: url(img/social-sprite.gif);
@@ -751,9 +774,10 @@ a[class^="sprite__link"] {
 	background-position: 190% bottom;
 	}
 }
-@media (max-width: 1160px) {
-
-	
+@media (max-width: 1135px) {
+	.present-me__transform_div {
+		display: none;
+	}	
 }
 
 /*Ноутбук — конец*/
@@ -903,7 +927,33 @@ a[class^="sprite__link"] {
 		top: -115%;
 		left: 90%;
 	}
-
+	
+	.my-skills {
+		height: 910px;
+	}
+	div[class^="my-skills__annotation"] {
+		font-size: 16px;
+		height: 110px;
+	}
+	img[class^="annotation__image"] {
+		width: 60px;
+		margin-bottom: 20px;
+	}
+	.my-skills__annotation_first, .my-skills__annotation_second,
+	.my-skills__annotation_third {
+		margin: 0 0 55px 0;
+	}
+	.my-skills__annotation_fourth {
+		margin: 0;
+	}
+	.my-skills__fixed-container {
+		flex-wrap: nowrap;
+		flex-direction: column;
+		align-items: center;
+	}
+	.album {
+		height: 400px;
+	}
 }
 @media (max-width: 800px) {
 	div[class*="fixed-container"] {
@@ -994,14 +1044,11 @@ a[class^="sprite__link"] {
 		padding-top: 50px;
 		margin-bottom: 50px;
 	}
-	.album {
-		height: 285px;
-	}
 	.photo_center {
 		width: 280px;
 		margin: 0 0 40px 0;
 	}
-	./*photo__link_image {
+	/*.photo__link_image {
 		width: 280px;
 	}*/
 	.photo_left {
@@ -1051,32 +1098,6 @@ a[class^="sprite__link"] {
 	.description {
 		margin: 0 auto;
 	}
-	.my-skills {
-		height: 910px;
-	}
-	.my-skills__annotation_first, .my-skills__annotation_second,
-	.my-skills__annotation_third {
-		margin: 0 0 55px 0;
-	}
-	.my-skills__annotation_fourth {
-		margin: 0;
-	}
-	div[class^="my-skills__annotation"] {
-		font-size: 16px;
-		height: 110px;
-	}
-	.my-skills__fixed-container {
-		flex-wrap: nowrap;
-		flex-direction: column;
-		align-items: center;
-	}
-	img[class^="annotation__image"] {
-		width: 60px;
-		margin-bottom: 20px;
-	}
-	.album {
-		height: 400px;
-	}
 	.present-me__transform_sharp {
 		top: -70%;
 		left: -20%;
@@ -1117,6 +1138,7 @@ a[class^="sprite__link"] {
 		left: -25%;
 	}
 }
+
 @media (max-width: 600px) {
 	.present-me {
 		height: 600px;

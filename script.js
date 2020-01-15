@@ -9,13 +9,38 @@ $(function(){
 	// Burst tags — end
 
 	// Anchors — start
-	$(".my-skills__button_action").on('click', function(){
-		window.location.href = "index.html#cost"
-	})
-	$(".about__button_action").on('click', function(){
-		window.location.href = "index.html#my-skills"
-	})
+	// $(".my-skills__button_action").on('click', function(){
+	// 	window.location.href = "index.html#cost"
+	// })
+	// $(".about__button_action").on('click', function(){
+	// 	window.location.href = "index.html#my-skills"
+	// })
 	// Anchors — end
+
+	// More information — start
+		// Узнать больше
+	$(".button_call").click(function(){
+		$(".inform-container").fadeIn(400)
+
+	});
+
+	$('.inform-container').click(function(event){
+		if(event.target == this) {
+			$(this).fadeOut(400);
+		}
+	})
+		// Узнать стоимость
+	$(".my-skills__button_action").click(function(){
+		$(".inform-container").fadeIn(400)
+
+	});
+
+	$('.inform-container').click(function(event){
+		if(event.target == this) {
+			$(this).fadeOut(400);
+		}
+	})
+	// More information — start
 
 	// Menu burger — start
 	$('.navigation__img_menu-burger')
