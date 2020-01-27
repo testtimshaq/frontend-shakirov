@@ -1,0 +1,18 @@
+.my-skills {
+	height: 650px;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.my-skills__fixed-container {
+	display: flex;
+    justify-content: space-between;
+}
+.my-skills__headliner {
+	padding-top: 86px;
+	margin-bottom: 88px;
+}
+[class^="annotation__image"] {
+	width: 82px;
+	margin-bottom: 30px;
+}

@@ -1,0 +1,60 @@
+.header {
+	height: 100px;
+	display: flex;
+}
+
+.header__information {
+	display: flex;
+}
+.header__navigation {
+	width: 50%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+	.header__navigation a {
+		padding-right: 30px;
+	}
+
+.header__phone-number {
+	width: 50%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+	.phone-number__tel-link {
+		margin-right: 30px;
+		font-size: 25px;
+		font-weight: bold;
+	}
+
+/*Menu burger — start*/
+.header__navigation-mobile {
+	height: 192px;
+	width: 150px;
+	background-color: #ff8b5d90;
+	display: none;
+	flex-direction: column;
+	position: absolute;
+	top: 70px;
+	z-index: 13;
+}
+.navigation-mobile__link_examples,
+.navigation-mobile__link_my-skills {
+	border-bottom: 1px solid white;
+}
+.header__navigation-mobile a {
+	color: white;
+	width: 130px;
+	font-size: 20px;
+	text-decoration: none;
+	padding: 0 0 20px 20px;
+	margin: 20px 0 0 0;
+}
+/*Menu burger — end*/
+.navigation__img_menu-burger, .navigation__img_menu-close {
+	display: none;
+}
+.navigation__img_menu-burger, .navigation__img_menu-close {
+	cursor: pointer;
+}

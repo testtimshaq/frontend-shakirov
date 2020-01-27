@@ -1,0 +1,11 @@
+.copyright {
+	height: 80px;
+	background-color: #31293c;
+	color: gray;
+	display: flex;
+	align-items: center;
+}
+.copyright__fixed-container {
+	display: flex;
+	justify-content: center;
+}

@@ -1,0 +1,74 @@
+html {
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+html, body {
+	max-width: 1920px;
+	min-width: 320px;
+	margin: 0;
+	font-family: Roboto;
+}
+*[class$="background_gray"] {
+	background-color: #fbfbfb;
+}
+div[class*="fixed-container"] {
+	width: 1170px;
+	margin: 0 auto;
+}
+div[class*="present-me__transform"] {
+	width: 90px;
+	margin: 0;
+	transform-origin: 0 0 0;
+	background: linear-gradient(to top, #ff8f5a, #ff2f96);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	font-weight: bold;
+	transition: transform 2s;
+}
+
+div[class^="my-skills__annotation"] {
+	width: 257px;
+	height: 145px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: gray;
+	font-size: 20px;
+	text-align: center;
+}
+div[class*="examples__photo"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+a[class^="sprite__link"] {
+	background-image: url(../../img/social-sprite.gif);
+	background-repeat: no-repeat;
+	width: 35px;
+	height: 30px;
+	display: inline-block;
+ 	margin-right: 10px;
+}
+a:hover {
+	border-bottom: 1px solid #ff2f96;
+}
+a[class$="no-decoration"] {
+	text-decoration: none;
+	color: black;
+}
+a[class$="no-decoration"]:hover {
+	color: #ff2f96;
+}
+a[class^="contacts__link"] {
+	text-decoration: none;
+	color: #8993ad;
+}
+a[class^="contacts__link"]:hover{
+	
+	color: #ff2f96;
+}
+.headliner {
+	font-size: 54px;
+	font-weight: bold;
+}

@@ -1,0 +1,36 @@
+button[class$="call"]:hover {
+	animation-duration: 3s;
+	transform: perspective(50px) rotateY(-2deg);
+	transform-origin: 50% 0%;
+}
+button[class$="action"]:hover {
+	animation-duration: 3s;
+	transform: perspective(50px) rotateY(2deg);
+	transform-origin: 50% 50%;
+}
+button {
+	cursor: pointer;
+}
+
+button[class$="call"] {
+	width: 207px;
+	height: 45px;
+	color: #fc557c;
+	background-color: white;
+	border: 1px solid #fc557c;
+}
+img[class$="call"] {
+	display: none;
+}
+
+
+
+button[class$="action"] {
+	width: 270px;
+	height: 60px;
+	font-size: 18px;
+	color: white;
+	background-color: #ff4e2e;
+	border: none;
+	margin: auto 0 auto 0;
+}
