@@ -34,3 +34,32 @@ button[class$="action"] {
 	border: none;
 	margin: auto 0 auto 0;
 }
+
+@media (max-width: 1024px) {
+	button[class^="slider__button"] {
+		width: 18px;
+		height: 18px;
+		border-radius: 50px;
+		border: 0px;
+		margin: 100px 30px 0 0;
+	}
+}
+
+@media (max-width: 800px) {
+	button[class$="action"] {
+		height: 55px;
+		font-size: 16px;
+		margin: auto auto 100px auto;
+	}
+	button[class^="slider__button"] {
+		width: 10px;
+		height: 10px;
+		margin: 50px 15px 0 0;
+	}
+	button[class$="action"] {
+		margin: 50px auto 50px auto;
+	}
+	img[class$="call"] {
+		display: block;
+	}
+}

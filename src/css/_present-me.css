@@ -1,183 +1,182 @@
 .present-me {
-	height: 670px;
-	background-image: url(../../img/bg-man.png);
-	background-position: 100% bottom;
-	background-repeat: no-repeat;
-	display: flex;
-	align-items: center;
-}
-
-.present-me__about {
-	display: flex;
-	flex-direction: column;
-	position: relative;
-	height: 298px;
-}
-.present-me__name {
-	font-size: 80px;
-	margin-bottom: 14px;
-	font-weight: bold;
-}
-.present-me__description {
-	font-size: 25px;
-	margin-bottom: 0px;
-	color: gray;
-}
-		
-/*Animation, transformation*/
-		.present-me__animation {
-			width: 0;
-			height: 0;
-		}
-		.present-me__div-open {
-			animation: move-1;
-			animation-direction: normal /*alternate*/;
-			animation-iteration-count: infinite;
-			animation-timing-function: linear;
-			animation-duration: 3s;
-			font-weight: bold;
-			font-size: 20px;
-		}
-		.present-me__div-text {
-			animation: move-block;
-			animation-direction: normal /*alternate*/;
-			animation-iteration-count: infinite;
-			animation-timing-function: linear;
-			animation-duration: 3s;
-			font-weight: bold;
-			font-size: 20px;
-  			width: 100px;
-  			border: 2px solid;
-  			text-align: center;
-		}
-		.present-me__div-close {
-			animation: move-2;
-			animation-direction: normal /*alternate*/;
-			animation-iteration-count: infinite;
-			animation-timing-function: linear;
-			animation-duration: 3s;
-			font-weight: bold;
-			font-size: 20px;
-		}
-		
-		.present-me__transform_sharp {
-			transform: rotate(27deg);
-			font-size: 60px;
-			position: absolute;
-			top: 24%;
-			left: -9%;
-		}
-		.present-me__transform_bracket {
-			transform: rotate(25deg);
-			font-size: 50px;
-			position: absolute;
-			top: -54%;
-			left: -20%;
-		}
-		.present-me__transform_close-tag {
-			font-size: 40px;
-			transform: rotate(-20deg);
-			position: absolute;
-			bottom: -47%;
-		}
-		.present-me__transform_close-tag_clone {
-			display: none;
-		}
-		.present-me__transform_div{
-			font-size: 37px;
-			transform: rotate(22deg);
-			position: absolute;
-			bottom: 5%;
-			left: 50%
-		}
-		.present-me__transform_div_clone{
-			font-size: 29px;
-			transform: rotate(-23deg);
-			position: absolute;
-			top: -35%;
-			left: 68%
-		}		
-		/*@keyframes move-1 {
-				from {
-					color: #ff8f5a;
-					display: none;
-					transform-origin: 0 0 0;
-					transform: translateX(0px) translateY(-500px);
-				}
-				1% {display: block;
-				}
-  				85% {
-  					color: #ff2f96;
-					transform: translateX(750px) translateY(-350px);
-  				}
-				97% {
-  					color: #ff2f96;
-				}
-				98% {
-  					color: transparent;
-				}
-				99% {
-  					color: #ff2f96;
-				}
-  				to {
-  					color: transparent;
-					transform: translateX(750px) translateY(-350px);
-  				}
-		}
-		@keyframes move-block {
-				from {
-					color: transparent;
-					transform-origin: 0 0 0;
-					transform: translateX(810px) translateY(-350px);
-				}
-				85% {
-					color: transparent;
-					transform: translateX(810px) translateY(-350px);
-				}
-				86% {
-  					color: #ff2f96;
-				}
-				97% {
-  					background-color: transparent;
-  					color: #ff2f96;
-				}
-				98% {
-  					color: transparent;
-				}
-				99% {
-  					color: #ff2f96;
-				}
-  				to {
-  					color: transparent;
-					transform: translateX(810px) translateY(-350px);
-  				}
-		}
-		@keyframes move-2 {
-				from {
-					color: #ff8f5a;
-					display: none;
-					transform-origin: 0 0 0;
-					transform: translateX(300px) translateY(300px);
-				}
-				1% {display: block;
-				}
-				85% {
-  					color: #ff2f96;
-					transform: translateX(928px) translateY(-350px);
-				}
-				97% {
-  					color: #ff2f96;
-				}
-				98% {
-  					color: transparent;
-				}
-				99% {
-  					color: #ff2f96;
-				}
-  				to {
-  					color: transparent;
-					transform: translateX(928px) translateY(-350px);
-  				}
-		}*/
-		
-		/*Animation, transformation*/
+  height: 670px;
+  background-image: url(../../img/bg-man.png);
+  background-position: 100% bottom;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center; }
+  @media (max-width: 1732px) {
+    .present-me {
+      background-position: 120% bottom; } }
+  @media (max-width: 1245px) {
+    .present-me {
+      background-position: 190% bottom; } }
+  @media (max-width: 1024px) {
+    .present-me {
+      background-position: 480px bottom;
+      background-size: 800px; } }
+  @media (max-width: 800px) {
+    .present-me {
+      height: 700px;
+      background-position: 100% top;
+      background-size: 510px; } }
+  @media (max-width: 600px) {
+    .present-me {
+      height: 600px;
+      background-position: center 90px;
+      background-size: 330px; } }
+  @media (max-width: 384px) {
+    .present-me {
+      height: 600px;
+      background-position: 70px 90px;
+      background-size: 330px; } }
+  .present-me .about {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 298px; }
+    @media (max-width: 1024px) {
+      .present-me .about {
+        height: 245px; } }
+    @media (max-width: 800px) {
+      .present-me .about {
+        align-self: flex-end; } }
+  .present-me .name {
+    font-size: 80px;
+    margin-bottom: 14px;
+    font-weight: bold; }
+    @media (max-width: 1366px) {
+      .present-me .name {
+        font-size: 54px; } }
+    @media (max-width: 1024px) {
+      .present-me .name {
+        margin-bottom: 18px; } }
+    @media (max-width: 997px) {
+      .present-me .name {
+        font-size: 32px; } }
+    @media (max-width: 800px) {
+      .present-me .name {
+        font-size: 30px;
+        margin: 0 auto 20px auto; } }
+  .present-me .description {
+    font-size: 25px;
+    margin-bottom: 0px;
+    color: gray; }
+    @media (max-width: 997px) {
+      .present-me .description {
+        font-size: 16px; } }
+    @media (max-width: 800px) {
+      .present-me .description {
+        margin: 0 auto;
+        font-size: 16px;
+        width: 212px;
+        text-align: center; } }
+  .present-me .animation {
+    width: 0;
+    height: 0; }
+  .present-me .transform_sharp {
+    font-size: 60px;
+    transform: rotate(27deg);
+    position: absolute;
+    top: 24%;
+    left: -9%; }
+    @media (max-width: 1024px) {
+      .present-me .transform_sharp {
+        top: 130%;
+        left: 3%; } }
+    @media (max-width: 800px) {
+      .present-me .transform_sharp {
+        top: -70%;
+        left: -20%; } }
+    @media (max-width: 600px) {
+      .present-me .transform_sharp {
+        left: 0%;
+        font-size: 25px; } }
+    @media (max-width: 384px) {
+      .present-me .transform_sharp {
+        left: 10%; } }
+  .present-me .transform_bracket {
+    font-size: 50px;
+    transform: rotate(25deg);
+    position: absolute;
+    top: -54%;
+    left: -20%; }
+    @media (max-width: 1024px) {
+      .present-me .transform_bracket {
+        left: 6%; } }
+    @media (max-width: 800px) {
+      .present-me .transform_bracket {
+        top: -180%;
+        left: -16%; } }
+    @media (max-width: 600px) {
+      .present-me .transform_bracket {
+        top: -130%;
+        left: 10%;
+        font-size: 30px; } }
+  .present-me .transform_close-tag {
+    font-size: 40px;
+    transform: rotate(-20deg);
+    position: absolute;
+    bottom: -47%; }
+    @media (max-width: 1024px) {
+      .present-me .transform_close-tag {
+        bottom: 120%;
+        left: 40%; } }
+    @media (max-width: 800px) {
+      .present-me .transform_close-tag {
+        display: none; } }
+  .present-me .transform_close-tag_clone {
+    display: none; }
+    @media (max-width: 1024px) {
+      .present-me .transform_close-tag_clone {
+        display: block;
+        font-size: 27px;
+        transform: rotate(-20deg);
+        position: absolute;
+        position: absolute;
+        bottom: -40%;
+        left: 30%; } }
+    @media (max-width: 800px) {
+      .present-me .transform_close-tag_clone {
+        bottom: 190%;
+        left: -10%; } }
+    @media (max-width: 600px) {
+      .present-me .transform_close-tag_clone {
+        bottom: 210%;
+        left: 40%;
+        font-size: 20px; } }
+  .present-me .transform_div {
+    font-size: 37px;
+    transform: rotate(22deg);
+    position: absolute;
+    bottom: 5%;
+    left: 50%; }
+    @media (max-width: 1732px) {
+      .present-me .transform_div {
+        display: none; } }
+  .present-me .transform_div_clone {
+    font-size: 29px;
+    transform: rotate(-23deg);
+    position: absolute;
+    top: -35%;
+    left: 68%; }
+    @media (max-width: 1791px) {
+      .present-me .transform_div_clone {
+        top: -55%; } }
+    @media (max-width: 1024px) {
+      .present-me .transform_div_clone {
+        top: -80%;
+        left: 80%; } }
+    @media (max-width: 997px) {
+      .present-me .transform_div_clone {
+        top: -80%;
+        left: 90%; } }
+    @media (max-width: 800px) {
+      .present-me .transform_div_clone {
+        top: -192%;
+        left: 90%;
+        font-size: 20px; } }
+    @media (max-width: 600px) {
+      .present-me .transform_div_clone {
+        top: -125%;
+        left: 70%; } }

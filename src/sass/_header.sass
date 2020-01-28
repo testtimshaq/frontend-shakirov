@@ -1,0 +1,81 @@
+.header 
+	height: 100px
+	display: flex
+	@media (max-width: 600px)
+		height: 55px
+	& .information
+		display: flex
+		@media (max-width: 800px)
+			padding-top: 30px
+			height: 30px
+		@media (max-width: 600px)
+			padding-top: 25px
+	& .navigation
+		width: 50%
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		@media (max-width: 1024px)
+			position: relative
+			align-items: center
+		@media (max-width: 800px)
+			align-items: center
+			width: 25%
+		& a 
+			padding-right: 30px
+			@media (max-width: 1024px)
+				display: none
+		& .menu-burger, .menu-close
+			display: none
+			cursor: pointer
+		& .menu-burger
+			@media (max-width: 1024px)
+				display: block
+			@media (max-width: 800px)
+				width: 24px
+				height: 18px
+		& .menu-close
+			@media (max-width: 800px)
+				height: 18px
+	& .phone-number
+		width: 50%
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		@media (max-width: 1024px)
+			width: 60%
+			justify-content: normal
+		@media (max-width: 997px)
+			width: 80%
+		@media (max-width: 800px)
+			width: 75%
+			justify-content: space-between
+		& .button_call
+			@media (max-width: 800px)
+				display: none
+		& .tel-link
+			margin-right: 30px
+			font-size: 25px
+			font-weight: bold
+			@media (max-width: 997px)
+				font-size: 18px
+			@media (max-width: 800px)
+				font-size: 18px
+	& .navigation-mobile
+		height: 192px
+		width: 150px
+		background-color: #ff8b5d90
+		display: none
+		flex-direction: column
+		position: absolute
+		top: 70px
+		z-index: 13
+		& .link_examples, & .link_my-skills
+			border-bottom: 1px solid white
+		& a 
+			color: white
+			width: 130px
+			font-size: 20px
+			text-decoration: none
+			padding: 0 0 20px 20px
+			margin: 20px 0 0 0

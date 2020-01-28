@@ -1,0 +1,68 @@
+$cr_1: #ff2f96
+$cr_2: #ff8f5a
+.footer 
+	& .fixed-container
+		height: 263px
+		display: flex
+		align-items: center
+		justify-content: space-between
+		@media (max-width: 800px)
+			height: 450px
+			align-items: flex-start
+			flex-direction: column
+			justify-content: space-evenly
+	& .navigation
+		display: flex
+		flex-direction: column
+		& a 
+			text-decoration: none
+			color: #8993ad
+			margin-bottom: 20px
+			&:hover
+				color: $cr_1
+	& .contacts
+		display: flex
+		flex-direction: column
+		height: 85px
+		width: 288px
+		justify-content: space-between
+		& h4
+			margin: 0
+			font-size: 25px
+			font-weight: 100
+		& .link_tel:before 
+			content: '\E100'
+			font-family: LigatureSymbols
+			margin-right: 22px
+			font-size: 25px
+			color: transparent
+			background: linear-gradient(to top, $cr_2, $cr_1)
+			background-clip: text
+			-webkit-background-clip: text
+		& .link_mailto:before
+			content: '\E08a'
+			font-family: LigatureSymbols
+			font-size: 25px
+			margin-right: 22px
+			color: transparent
+			background: linear-gradient(to top, #ff8f5a, #ff2f96)
+			background-clip: text
+			-webkit-background-clip: text
+	& .social
+		display: flex
+		flex-direction: column
+		width: 248px
+		height: 105px
+		& .button_call
+			@media (max-width: 800px)
+				display: none
+	& .sprite
+		margin-top: 20px
+		& .link_vk
+			background-position: left top
+		& .link_fb
+			background-position: -56px top
+		& .link_tw
+			background-position: -108px top
+		& .link_in
+			background-position: -164px top

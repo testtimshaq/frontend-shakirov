@@ -1,80 +1,120 @@
 .cost {
-	width: 100%;
-	height: 360px;
-	display: flex;
-	align-items: center;
-	background: linear-gradient(to top right, #ff8f5a, #ff7b67, #ff2f96);
-}
-.cost__fixed-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-.cost__price-tag {
-	width: 943px;
-	height: 110px;
-	font-size: 45px;
-	font-weight: 700;
-	color: white;
-	margin-bottom: 43px;
-}
-.cost__details {
-	width: 760px;
-	padding-right: 183px;
-	height: 45px;
-	font-size: 18px;
-	color: white;
-}
-.cost__animation {
-	width: 0;
-	height: 0;
-}
-/*Cost transform — start*/
-		div[class*="cost__transform"] {
-			width: 50px;
-			margin: 0;
-			transform-origin: 0 0 0;
-			color: white;
-		}
-		.cost__transform_sharp {
-			transform: rotate(16deg);
-			font-size: 55px;
-			position: absolute;
-			top: 85%;
-			left: -10%;
-		}
-		.cost__transform_bracket {
-			transform: rotate(27deg);
-			font-size: 47px;
-			font-weight: 600;
-			position: absolute;
-			top: -13%;
-			left: -20%;
-		}
-		.cost__transform_bracket_clone {
-			transform: rotate(-20deg);
-			font-size: 50px;
-			font-weight: 500;
-			position: absolute;
-			top: 95%;
-			right: -22%;
-		}
-		.cost__transform_close-tag {
-			transform: rotate(-26deg);
-			font-size: 40px;
-			position: absolute;
-			right: -13%;
-		}
-		.cost__transform_div-open {
-			transform: rotate(20deg);
-			font-size: 35px;
-			font-weight: 500;
-			position: absolute;
-			top: 100%;
-			right: 5%;
-		}
-		.cost__fixed-container {
-			position: relative;
-		}
-		/*Cost transform — end*/
-		
+  width: 100%;
+  height: 360px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to top right, #ff8f5a, #ff7b67, #ff2f96); }
+  .cost .fixed-container {
+    flex-direction: column;
+    align-items: center;
+    position: relative; }
+  .cost .price-tag {
+    width: 943px;
+    height: 110px;
+    font-size: 45px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 43px; }
+    @media (max-width: 997px) {
+      .cost .price-tag {
+        width: 100%;
+        font-size: 32px; } }
+    @media (max-width: 800px) {
+      .cost .price-tag {
+        width: 100%;
+        height: auto;
+        font-size: 28px;
+        margin-bottom: 50px; } }
+  .cost .details {
+    width: 760px;
+    padding-right: 183px;
+    height: 45px;
+    font-size: 18px;
+    color: white; }
+    @media (max-width: 997px) {
+      .cost .details {
+        width: 100%;
+        font-size: 16px;
+        padding-right: 0; } }
+    @media (max-width: 800px) {
+      .cost .details {
+        width: 100%;
+        height: auto;
+        font-size: 15px; } }
+  .cost .animation {
+    width: 0;
+    height: 0; }
+    @media (max-width: 600px) {
+      .cost .animation {
+        display: none; } }
+  .cost .transform_sharp {
+    font-size: 55px;
+    transform: rotate(16deg);
+    position: absolute;
+    top: 85%;
+    left: -10%; }
+    @media (max-width: 1024px) {
+      .cost .transform_sharp {
+        display: none; } }
+    @media (max-width: 800px) {
+      .cost .transform_sharp {
+        display: block;
+        font-size: 18px;
+        top: 90%;
+        left: -25%; } }
+  .cost .transform_bracket {
+    font-size: 47px;
+    transform: rotate(27deg);
+    position: absolute;
+    font-weight: 600;
+    top: -13%;
+    left: -20%; }
+    @media (max-width: 1024px) {
+      .cost .transform_bracket {
+        font-size: 30px;
+        top: -30%;
+        left: 15%; } }
+    @media (max-width: 800px) {
+      .cost .transform_bracket {
+        top: 0%;
+        left: -30%; } }
+  .cost .transform_bracket_clone {
+    font-size: 50px;
+    transform: rotate(-20deg);
+    position: absolute;
+    font-weight: 500;
+    top: 95%;
+    right: -22%; }
+    @media (max-width: 1024px) {
+      .cost .transform_bracket_clone {
+        display: none; } }
+  .cost .transform_close-tag {
+    font-size: 40px;
+    transform: rotate(-26deg);
+    position: absolute;
+    right: -13%; }
+    @media (max-width: 1024px) {
+      .cost .transform_close-tag {
+        right: 15%;
+        top: 100%; } }
+    @media (max-width: 800px) {
+      .cost .transform_close-tag {
+        top: 10%;
+        right: -40%; } }
+  .cost .transform_div-open {
+    font-size: 35px;
+    transform: rotate(20deg);
+    position: absolute;
+    font-weight: 500;
+    top: 100%;
+    right: 5%; }
+    @media (max-width: 1024px) {
+      .cost .transform_div-open {
+        font-size: 25px;
+        top: 100%;
+        right: 50%; } }
+    @media (max-width: 800px) {
+      .cost .transform_div-open {
+        font-size: 20px;
+        top: 100%;
+        right: -10%; } }

@@ -1,0 +1,105 @@
+$cr_1: #ff8f5a
+$cr_2: #ff7b67
+$cr_3: #ff2f96
+@mixin trans($px,$deg)
+	font-size: $px
+	transform: rotate($deg)
+	position: absolute
+.cost 
+	width: 100%
+	height: 360px
+	display: flex
+	align-items: center
+	background: linear-gradient(to top right, $cr_1, $cr_2, $cr_3)
+	& .fixed-container
+		display:flex
+		flex-direction: column
+		align-items: center
+		position: relative
+	& .price-tag
+		width: 943px
+		height: 110px
+		font-size: 45px
+		font-weight: 700
+		color: white
+		margin-bottom: 43px
+		@media (max-width: 997px)
+			width: 100%
+			font-size: 32px
+		@media (max-width: 800px)
+			width: 100%
+			height: auto
+			font-size: 28px
+			margin-bottom: 50px
+	& .details
+		width: 760px
+		padding-right: 183px
+		height: 45px
+		font-size: 18px
+		color: white
+		@media (max-width: 997px)
+			width: 100%
+			font-size: 16px
+			padding-right: 0
+		@media (max-width: 800px)
+			width: 100%
+			height: auto
+			font-size: 15px
+	& .animation
+		width: 0
+		height: 0
+		@media (max-width: 600px)
+			display: none
+
+	& .transform_sharp
+		@include trans(55px,16deg)
+		top: 85%
+		left: -10%
+		@media (max-width: 1024px)
+			display: none
+		@media (max-width: 800px)
+			display: block
+			font-size: 18px
+			top: 90%
+			left: -25%
+	& .transform_bracket
+		@include trans(47px,27deg)
+		font-weight: 600
+		top: -13%
+		left: -20%
+		@media (max-width: 1024px)
+			font-size: 30px
+			top: -30%
+			left: 15%
+		@media (max-width: 800px)
+			top: 0%
+			left: -30%
+	& .transform_bracket_clone
+		@include trans(50px,-20deg)
+		font-weight: 500
+		top: 95%
+		right: -22%
+		@media (max-width: 1024px)
+			display: none
+	& .transform_close-tag
+		@include trans(40px,-26deg)
+		right: -13%
+		@media (max-width: 1024px)
+			right: 15%
+			top: 100%
+		@media (max-width: 800px)
+			top: 10%
+			right: -40%
+	& .transform_div-open
+		@include trans(35px,20deg)
+		font-weight: 500
+		top: 100%
+		right: 5%
+		@media (max-width: 1024px)
+			font-size: 25px
+			top: 100%
+			right: 50%
+		@media (max-width: 800px)
+			font-size: 20px
+			top: 100%
+			right: -10%

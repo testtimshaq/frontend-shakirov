@@ -18,8 +18,7 @@ const cssFiles = [
     './src/css/_cost.css',
     './src/css/_footer.css',
     './src/css/_copyright.css',
-    './src/css/_popup.css',
-    './src/css/_media.css'
+    './src/css/_popup.css'
 ]
 
 const jsFiles = [

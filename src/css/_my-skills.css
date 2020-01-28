@@ -1,18 +1,51 @@
 .my-skills {
-	height: 650px;
-	display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.my-skills__fixed-container {
-	display: flex;
-    justify-content: space-between;
-}
-.my-skills__headliner {
-	padding-top: 86px;
-	margin-bottom: 88px;
-}
-[class^="annotation__image"] {
-	width: 82px;
-	margin-bottom: 30px;
-}
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  @media (max-width: 1024px) {
+    .my-skills {
+      height: 890px; } }
+  @media (max-width: 997px) {
+    .my-skills {
+      height: 910px; } }
+  .my-skills .fixed-container {
+    display: flex;
+    justify-content: space-between; }
+    @media (max-width: 1024px) {
+      .my-skills .fixed-container {
+        flex-wrap: wrap; } }
+    @media (max-width: 997px) {
+      .my-skills .fixed-container {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center; } }
+    .my-skills .fixed-container img {
+      width: 82px;
+      margin-bottom: 30px; }
+      @media (max-width: 997px) {
+        .my-skills .fixed-container img {
+          width: 60px;
+          margin-bottom: 20px; } }
+    @media (max-width: 1024px) {
+      .my-skills .fixed-container .annotation_first, .my-skills .fixed-container .annotation_second {
+        margin-bottom: 85px; } }
+    @media (max-width: 997px) {
+      .my-skills .fixed-container .annotation_first, .my-skills .fixed-container .annotation_second, .my-skills .fixed-container .annotation_third {
+        margin: 0 0 55px 0; } }
+    @media (max-width: 997px) {
+      .my-skills .fixed-container .annotation_fourth {
+        margin: 0; } }
+  .my-skills .headliner {
+    padding-top: 86px;
+    margin-bottom: 88px; }
+    @media (max-width: 997px) {
+      .my-skills .headliner {
+        margin-bottom: 50px; } }
+    @media (max-width: 800px) {
+      .my-skills .headliner {
+        width: 218px;
+        font-size: 30px;
+        text-align: center;
+        padding-top: 50px;
+        margin-bottom: 50px; } }

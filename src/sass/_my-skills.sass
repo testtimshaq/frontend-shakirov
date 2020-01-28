@@ -1,0 +1,44 @@
+.my-skills 
+	height: 650px
+	display: flex
+	flex-direction: column
+	align-items: center
+	@media (max-width: 1024px)
+		height: 890px
+	@media (max-width: 997px)
+		height: 910px
+	& .fixed-container
+		display: flex
+		justify-content: space-between
+		@media (max-width: 1024px)
+			flex-wrap: wrap
+		@media (max-width: 997px)
+			flex-wrap: nowrap
+			flex-direction: column
+			align-items: center
+		& img 
+			width: 82px
+			margin-bottom: 30px
+			@media (max-width: 997px)
+				width: 60px
+				margin-bottom: 20px
+		& .annotation_first, .annotation_second
+			@media (max-width: 1024px)
+				margin-bottom: 85px
+		& .annotation_first, .annotation_second, .annotation_third
+			@media (max-width: 997px)
+				margin: 0 0 55px 0
+		& .annotation_fourth
+			@media (max-width: 997px)
+				margin: 0
+	& .headliner
+		padding-top: 86px
+		margin-bottom: 88px
+		@media (max-width: 997px)
+			margin-bottom: 50px
+		@media (max-width: 800px)
+			width: 218px
+			font-size: 30px
+			text-align: center
+			padding-top: 50px
+			margin-bottom: 50px

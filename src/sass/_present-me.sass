@@ -1,0 +1,142 @@
+@mixin trans  ($px,$deg)
+	font-size: $px
+	transform: rotate($deg)
+	position: absolute
+.present-me
+	height: 670px
+	background-image: url(../../img/bg-man.png)
+	background-position: 100% bottom
+	background-repeat: no-repeat
+	display: flex
+	align-items: center
+	@media (max-width: 1732px)
+		background-position: 120% bottom
+	@media (max-width: 1245px)
+		background-position: 190% bottom
+	@media (max-width: 1024px)
+		background-position: 480px bottom
+		background-size: 800px
+	@media (max-width: 800px)
+		height: 700px
+		background-position: 100% top
+		background-size: 510px
+	@media (max-width: 600px)
+		height: 600px
+		background-position: center 90px
+		background-size: 330px
+	@media (max-width: 384px)
+		height: 600px
+		background-position: 70px 90px
+		background-size: 330px
+	& .about
+		display: flex
+		flex-direction: column
+		position: relative
+		height: 298px
+		@media (max-width: 1024px)
+			height: 245px
+		@media (max-width: 800px)
+			align-self: flex-end
+	& .name
+		font-size: 80px
+		margin-bottom: 14px
+		font-weight: bold
+		@media (max-width: 1366px)
+			font-size: 54px
+		@media (max-width: 1024px)
+			margin-bottom: 18px
+		@media (max-width: 997px)
+			font-size: 32px
+		@media (max-width: 800px)
+			font-size: 30px
+			margin: 0 auto 20px auto
+	& .description
+		font-size: 25px
+		margin-bottom: 0px
+		color: gray
+		@media (max-width: 997px)
+			font-size: 16px
+		@media (max-width: 800px)
+			margin: 0 auto
+			font-size: 16px
+			width: 212px
+			text-align: center
+	& .animation
+		width: 0
+		height: 0
+	& .transform_sharp
+		@include trans(60px,27deg)
+		top: 24%
+		left: -9%
+		@media (max-width: 1024px)
+			top: 130%
+			left: 3%
+		@media (max-width: 800px)
+			top: -70%
+			left: -20%
+		@media (max-width: 600px)
+			left: 0%
+			font-size: 25px
+		@media (max-width: 384px)
+			left: 10%
+	& .transform_bracket
+		@include trans(50px,25deg)
+		top: -54%
+		left: -20%
+		@media (max-width: 1024px)
+			left: 6%
+		@media (max-width: 800px)
+			top: -180%
+			left: -16%
+		@media (max-width: 600px)
+			top: -130%
+			left: 10%
+			font-size: 30px
+	& .transform_close-tag
+		@include trans(40px,-20deg)
+		bottom: -47%
+		@media (max-width: 1024px)
+			bottom: 120%
+			left: 40%
+		@media (max-width: 800px)
+			display: none
+	& .transform_close-tag_clone
+		display: none
+		@media (max-width: 1024px)
+			display: block
+			@include trans(27px,-20deg)
+			position: absolute
+			bottom: -40%
+			left: 30%
+		@media (max-width: 800px)
+			bottom: 190%
+			left: -10%
+		@media (max-width: 600px)
+			bottom: 210%
+			left: 40%
+			font-size: 20px
+	& .transform_div
+		@include trans(37px,22deg)
+		bottom: 5%
+		left: 50%
+		@media (max-width: 1732px)
+			display: none
+	& .transform_div_clone
+		@include trans(29px,-23deg)
+		top: -35%
+		left: 68%
+		@media (max-width: 1791px)
+			top: -55%
+		@media (max-width: 1024px)
+			top: -80%
+			left: 80%
+		@media (max-width: 997px)
+			top: -80%
+			left: 90%
+		@media (max-width: 800px)
+			top: -192%
+			left: 90%
+			font-size: 20px
+		@media (max-width: 600px)
+			top: -125%
+			left: 70%
