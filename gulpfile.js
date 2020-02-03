@@ -6,20 +6,13 @@ const uglify = require('gulp-uglify');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 const imagemin = require('gulp-imagemin');
+const sourcemaps = require('gulp-sourcemaps');
+const sass = require('gulp-sass');
 
 const cssFiles = [
-    './src/css/_fonts.css',
-    './src/css/_global.css',
-    './src/css/_button.css',
-    './src/css/_header.css',
-    './src/css/_present-me.css',
-    './src/css/_my-skills.css',
-    './src/css/_examples.css',
-    './src/css/_cost.css',
-    './src/css/_footer.css',
-    './src/css/_copyright.css',
-    './src/css/_popup.css'
+    './src/css/main.css'
 ]
+
 
 const jsFiles = [
     './src/js/popup.js',
@@ -27,9 +20,9 @@ const jsFiles = [
     './src/js/slider.js'
 ]
 
+
 function styles() {
     return gulp.src(cssFiles)
-
     .pipe(concat('styles.css'))
     .pipe(autopref({
         browserlist: ['> 1%'],
@@ -41,6 +34,8 @@ function styles() {
     .pipe(gulp.dest('./build/css'))
     .pipe(browserSync.stream())
 }
+
+
 
 function scripts() {
     return gulp.src(jsFiles)
@@ -68,6 +63,15 @@ function clean() {
   .pipe(browserSync.stream())
 }
 
+function presass() {
+    return gulp.src('./src/sass/main.sass')
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest('./src/css'))
+    .pipe(browserSync.stream())
+}
+
 function watch() {
     browserSync.init({
         server: {
@@ -75,15 +79,19 @@ function watch() {
         }
     });
     gulp.watch('./src/css/**/*.css', styles)
+    gulp.watch('./src/sass/**/*.sass', presass)
     gulp.watch('./src/js/**/*.js', scripts)
     gulp.watch('./src/img/**/*', compress)
     gulp.watch("./*.html").on('change', browserSync.reload);
 }
 
+
+
 gulp.task('styles', styles);
 gulp.task('scripts', scripts);
 gulp.task('watch', watch);
-gulp.task('build', gulp.series(clean, gulp.parallel(styles, scripts, compress)));
+gulp.task('build', gulp.series(clean, presass, gulp.parallel(styles, scripts, compress)));
 gulp.task('dev', gulp.series('build', 'watch'));
 gulp.task('del', clean);
 gulp.task('compress', compress);
+gulp.task('presass', presass);

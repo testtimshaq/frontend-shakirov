@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "del": "^5.1.0"
+    "del": "^5.1.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
