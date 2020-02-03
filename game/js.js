@@ -1,22 +1,3 @@
-		// var y = prompt('Введите цифру или число для сложения:');
-		// var v = 0;
-		
-
-		// while (y != null) {
-		// y = parseInt(y);
-		// if (isNaN(y) == true)
-		// 	{
-		// 		alert('Введено некорректное значение =(');
-		// 		break;
-		// } else
-		// {
-		// 	v = v + y;
-		// }
-		
-		// 	y = prompt('Введите цифру или число для сложения:');
-		// }
-
-		// alert('Сумма введенных значений: ' + v);
 "use strict";
 
 
@@ -29,16 +10,11 @@ function random(min, max) {
 };
 
 
-function range(){
-
-}
-
-
-var winNumber = random();
+function game(deadLine) {
 
 var userNumber = prompt('Угадай целое число от 1 до 100 включительно:');
 
-while (userNumber != winNumber) {
+while ((userNumber != winNumber) && (deadLine != 0)) {
 	if (userNumber == null) {
 	alert('Сдулся? =(');
 	break;
@@ -47,30 +23,41 @@ while (userNumber != winNumber) {
 
 		if (isNaN(userNumber)) {
 			alert('Введи число!');
-			userNumber = prompt('Угадай целое число от 1 до 100 включительно:');
+				deadLine = deadLine - 1;
+			if (deadLine > 0) {
+				userNumber = prompt('Попыток: ' + deadLine);
+			} else {
+				break;
+			}
 		} else if (userNumber < winNumber) {
 			alert('Больше!');
-			userNumber = prompt('Угадай целое число от 1 до 100 включительно:');
+				deadLine = deadLine - 1;
+			if (deadLine > 0) {
+				userNumber = prompt('Попыток: ' + deadLine);
+			} else {
+				break;
+			}
 		} else {
-			alert('Меньше!')
-			userNumber = prompt('Угадай целое число от 1 до 100 включительно:');
+			alert('Меньше!');
+				deadLine = deadLine - 1;
+			if (deadLine > 0) {
+				userNumber = prompt('Попыток: ' + deadLine);
+			} else {
+				break;
+			}
 		}
 	};
-} if (userNumber == null) {
-	alert('Игра окончена. ОК, чтобы повторить!');location.reload();
-} else {alert('Правильно! ОК, чтобы повторить!');location.reload();}
+} if ((userNumber != winNumber) && (deadLine == 0)) {
+	alert('Игра окончена. ОК, чтобы повторить.');
+	winNumber = random();
+	game(10);
+} else {alert('Правильно! ОК, чтобы повторить.');winNumber = random();game(10);}
+
+};
 
 
+var winNumber = random();
 
+var deadLine = 10;
 
-
-
-
-
-// нажал отмена?
-	// Сдулся? =(
-// парсим. NaN?
-	// Введи число!
-// меньше?
-	// Больше!
-// Меньше!
+game(10);
