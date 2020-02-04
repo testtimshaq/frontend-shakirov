@@ -569,6 +569,9 @@ img[class$="call"] {
       @media (max-width: 800px) {
         .examples .album img {
           width: 320px; } }
+      @media (max-width: 384px) {
+        .examples .album img {
+          width: 280px; } }
     .examples .album a {
       text-decoration: none;
       color: gray;
@@ -864,4 +867,4 @@ input[class^="informer__input"] {
   border: 3px solid white;
   background-color: transparent; }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=../../main.css.map */

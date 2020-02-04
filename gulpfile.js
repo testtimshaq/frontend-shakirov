@@ -67,7 +67,7 @@ function presass() {
     return gulp.src('./src/sass/main.sass')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
-    .pipe(sourcemaps.write('./'))
+    .pipe(sourcemaps.write('../../'))
     .pipe(gulp.dest('./src/css'))
     .pipe(browserSync.stream())
 }
