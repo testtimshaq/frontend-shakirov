@@ -14,7 +14,7 @@ $cr_3: #ff2f96
 	& .fixed-container
 		display:flex
 		flex-direction: column
-		align-items: center
+		align-items: flex-end
 		position: relative
 	& .price-tag
 		width: 943px
@@ -23,6 +23,9 @@ $cr_3: #ff2f96
 		font-weight: 700
 		color: white
 		margin-bottom: 43px
+		padding-left: 115px
+		@media (max-width: 1366px)
+			padding-left: 0
 		@media (max-width: 997px)
 			width: 100%
 			font-size: 32px
@@ -33,14 +36,15 @@ $cr_3: #ff2f96
 			margin-bottom: 50px
 	& .details
 		width: 760px
-		padding-right: 183px
+		padding-left: 115px
 		height: 45px
 		font-size: 18px
 		color: white
+		@media (max-width: 1366px)
+			padding-left: 0
 		@media (max-width: 997px)
 			width: 100%
 			font-size: 16px
-			padding-right: 0
 		@media (max-width: 800px)
 			width: 100%
 			height: auto
