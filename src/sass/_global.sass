@@ -1,11 +1,11 @@
 html 
-	overflow-x: hidden
 	scroll-behavior: smooth
 
 html, body 
 	max-width: 1920px
 	min-width: 320px
 	margin: 0
+	overflow-x: hidden
 	font-family: Roboto
 
 *[class$="background_gray"] 
@@ -14,47 +14,72 @@ html, body
 div[class*="fixed-container"] 
 	width: 1170px
 	margin: 0 auto
+	@media (max-width: 1366px) 
+		width: 950px
+	@media (max-width: 1024px)
+		width: 945px
+	@media (max-width: 997px)
+		width: 640px
+	@media (max-width: 800px)
+		width: 320px
+	@media (max-width: 384px)
+		width: 280px
 
 div[class*="present-me__transform"] 
 	width: 90px
 	margin: 0
 	transform-origin: 0 0 0
-	background: linear-gradient(to top, #ff8f5a, #ff2f96)
+	background-image: linear-gradient(to top, #f26522 0%, #fa0891 99%, #fa0891 100%)
 	background-clip: text
 	-webkit-background-clip: text
 	color: transparent
 	font-weight: bold
-	transition: transform 2s
+	font-weight: 700
+	@media (max-width: 320px)
+		font-size: 22px
 
 
-div[class^="my-skills__annotation"] 
-	width: 257px
-	height: 145px
+div[class*="examples__photo"] 
 	display: flex
 	flex-direction: column
 	align-items: center
-	color: gray
-	font-size: 20px
-	text-align: center
-
-div[class*="examples__photo"] 
-    display: flex
-    flex-direction: column
-    align-items: center
+	@media (max-width: 1024px)
+		text-align: center
+		width: 458px
+	@media (max-width: 320px)
+		text-align: center
+		width: 320px
 
 div[class*="cost__transform"] 
 	width: 50px
 	margin: 0
 	transform-origin: 0 0 0
 	color: white
-		
+	font-weight: 700
+
+div[class*="present-me__div"]
+	@media (max-width: 800px)
+		display: none
+
+div[class^="my-skills__annotation"]
+	@media (max-width: 997px)
+		font-size: 16px
+		height: 110px
+	@media (max-width: 320px)
+		height: 125px
+
+img[class^="annotation__image"]
+	@media (max-width: 997px)
+		width: 60px
+		margin-bottom: 20px
+
 a[class^="sprite__link"] 
 	background-image: url(../../img/social-sprite.gif)
 	background-repeat: no-repeat
 	width: 35px
 	height: 30px
 	display: inline-block
- 	margin-right: 10px
+	margin-right: 10px
 
 a:hover 
 	border-bottom: 1px solid #ff2f96
@@ -77,54 +102,12 @@ a[class^="contacts__link"]:hover
 .headliner 
 	font-size: 54px
 	font-weight: bold
-
-@media (max-width: 1366px) 
-	div[class*="fixed-container"] 
-		width: 950px
-	
-
-@media (max-width: 1024px) 
-	div[class*="fixed-container"] 
-		width: 945px
-	
-	div[class^="my-skills__annotation"] 
-		margin-left: 63px
-		margin-right: 63px
-	
-
-@media (max-width: 997px) 
-	div[class*="fixed-container"] 
-		width: 640px
-	
-	div[class^="my-skills__annotation"] 
-		font-size: 16px
-		height: 110px
-	
-	img[class^="annotation__image"] 
-		width: 60px
-		margin-bottom: 20px
-	
-	.headliner 
+	@media (max-width: 997px)
 		font-size: 32px
 		margin-bottom: 50px
-	
-
-@media (max-width: 800px) 
-	div[class*="fixed-container"] 
-		width: 320px
-	
-	div[class*="present-me__div"] 
-		display: none
-	
-	.headliner 
+	@media (max-width: 800px)
 		width: 218px
 		font-size: 30px
 		text-align: center
 		padding-top: 50px
 		margin-bottom: 50px
-	
-
-@media (max-width: 384px) 
-	div[class*="fixed-container"] 
-		width: 280px
-	

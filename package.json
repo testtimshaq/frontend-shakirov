@@ -1,7 +1,7 @@
 {
-  "name": "Gulp",
+  "name": "graduate-layout-work",
   "version": "1.0.0",
-  "description": "",
+  "description": "My Graduate Layout Work for SkillBox",
   "main": "index.js",
   "dependencies": {
     "del": "^5.1.0",
@@ -21,6 +21,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Shakirov Timur",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/testtimshaq/frontend-shakirov.git"
+  },
+  "bugs": {
+    "url": "https://github.com/testtimshaq/frontend-shakirov/issues"
+  },
+  "homepage": "https://github.com/testtimshaq/frontend-shakirov#readme"
 }

@@ -196,10 +196,33 @@
     opacity: 1;
     color: #ff4e2e;
 }
+
+@media (max-width: 1024px) {
+.slick-dots li button:before {
+    font-size: 170px;
+    top: 237%;
+}
+
+}
 @media (max-width: 800px) {
     .slick-dots
 {
     margin: -55px auto;
     position: relative;
+}
+
+}
+
+@media (max-width: 800px) {
+.slick-dots li button:before {
+    top: 65%;
+}
+}
+
+@media (max-width: 320px) {
+.slick-dots li button:before {
+    font-size: 90px;
+    top: 191%;
+    left: 100%;
 }
 }

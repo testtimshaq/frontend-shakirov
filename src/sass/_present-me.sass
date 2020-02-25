@@ -7,12 +7,15 @@
 	display: flex
 	align-items: center
 	position: relative
+	overflow: hidden
+	@media (max-width: 1024px)
+		height: 668px
 	@media (max-width: 800px)
 		height: 700px
 	@media (max-width: 600px)
 		height: 600px
-	@media (max-width: 384px)
-		height: 600px
+	@media (max-width: 380px)
+		height: 637px
 	& .elipse
 		position: absolute
 		bottom: 0
@@ -22,30 +25,69 @@
 		overflow: hidden
 		@media (max-width: 1366px)
 			right: -5%
-		@media (max-width: 996px)
-			width: 650px
-			right: -10%
+		@media (max-width: 1225px)
+			right: -14%
+		@media (max-width: 1055px)
+			right: -18%
+		@media (max-width: 1024px)
+			right: 0
+			width: 547px
+			height: 525px
+		@media (max-width: 997px)
+			right: 0
+		@media (max-width: 890px)
+			right: -5%
 		@media (max-width: 800px)
-			display: none
-		@media (max-width: 375px)
-			display: block
 			bottom: 250px
-			right: -8%
+			right: 0
+			width: 100%
+			height: 60%
+		@media (max-width: 600px)
+			height: 60%
+		@media (max-width: 380px)
+			display: block
+			height: 46%
+			right: 0
+			bottom: 224px
 		& svg
+			overflow: hidden
+		& .svg_1920
 			display: block
 			width: 100%
 			height: 100%
-		@media (max-width: 375px)
-			height: 50%
-			width: 120%
+			@media (max-width: 1024px)
+				display: none
+			@media (max-width: 800px)
+				display: none
+			@media (max-width: 380px)
+				height: 50%
+				width: 120%
+		& .svg_1024
+			display: none
+			@media (max-width: 1024px)
+				display: block
+			@media (max-width: 800px)
+				display: none
+		& .svg_320
+			display: none
+			@media (max-width: 800px)
+				display: block
+				width: 100%
+				block-size: 100%
+				position: absolute
+				bottom: 0
 	& .pic img
-		width: 435px
+		width: 424px
 		position: absolute
-		right: 15%
+		right: 16%
 		bottom: 0
+		@media (max-width: 1225px)
+			right: 6%
+		@media (max-width: 1024px)
+			right: 4%
 		@media (max-width: 996px)
 			width: 400px
-			right: 10%
+			right: 2%
 		@media (max-width: 800px)
 			width: 300px
 			bottom: 250px
@@ -53,8 +95,10 @@
 		@media (max-width: 600px)
 			width: 180px
 			right: (300/900)*100%
-		@media (max-width: 375px)
-			right: 180/(375*2)*100%
+		@media (max-width: 380px)
+			right: 6%
+			bottom: 224px
+			width: 223px
 	& .about
 		display: flex
 		flex-direction: column
@@ -68,22 +112,26 @@
 		font-size: 80px
 		margin-bottom: 14px
 		font-weight: bold
+		@media (max-width: 1535px)
+			font-size: 70px
 		@media (max-width: 1366px)
 			font-size: 54px
-		@media (max-width: 1024px)
 			margin-bottom: 18px
-			font-size: 45px
 		@media (max-width: 997px)
 			font-size: 32px
 		@media (max-width: 800px)
 			font-size: 30px
 			margin: 0 auto 20px auto
+		@media (max-width: 380px)
+			font-size: 30px
+			margin: 33px auto 7px auto
 	& .description
 		font-size: 25px
 		margin-bottom: 0px
 		color: gray
 		@media (max-width: 1024px)
-			font-size: 18px
+			font-size: 25px
+			margin-bottom: 30px
 		@media (max-width: 997px)
 			font-size: 16px
 		@media (max-width: 800px)
@@ -91,32 +139,43 @@
 			font-size: 16px
 			width: 212px
 			text-align: center
+		@media (max-width: 380px)
+			line-height: 24px
+	& .about__button_action
+		margin: 45px 0 0 0
+		@media (max-width: 1024px)
+			margin: 17px 0 0
+		@media (max-width: 380px)
+			width: 280px
+			margin: 23px auto 0
 	& .animation
 		width: 0
 		height: 0
 	& .transform_sharp
-		@include trans(60px,27deg)
+		@include trans(60px,18deg)
 		top: 24%
-		left: -9%
+		left: -10%
 		@media (max-width: 1024px)
-			top: 130%
+			top: 127%
 			left: 3%
 		@media (max-width: 800px)
-			top: -70%
-			left: -20%
+			top: -112%
+			left: -45%
 		@media (max-width: 600px)
 			left: 0%
 			font-size: 25px
-		@media (max-width: 384px)
-			left: 0
-		@media (max-width: 800px)
-			top: -90%
+		@media (max-width: 380px)
+			left: 23px
+			top: -99%
+			transform: rotate(16deg)
 	& .transform_bracket
 		@include trans(50px,25deg)
 		top: -54%
 		left: -20%
 		@media (max-width: 1024px)
 			left: 6%
+			top: -68%
+			transform: rotate(26deg)
 		@media (max-width: 800px)
 			top: -180%
 			left: -16%
@@ -126,31 +185,42 @@
 			font-size: 30px
 		@media (max-width: 600px)
 			top: -140%
+		@media (max-width: 380px)
+			top: -143%
+			left: 13%
+			font-size: 24px
+			transform: rotate(23deg)
 	& .transform_close-tag
 		@include trans(40px,-20deg)
 		bottom: -47%
 		@media (max-width: 1024px)
-			bottom: 120%
-			left: 40%
+			bottom: 115%
+			left: 41%
+			font-size: 45px
+			transform: rotate(13deg)
 		@media (max-width: 800px)
 			display: none
 	& .transform_close-tag_clone
 		display: none
 		@media (max-width: 1024px)
 			display: block
-			@include trans(27px,-20deg)
+			@include trans(38px,-22deg)
 			position: absolute
-			bottom: -40%
-			left: 30%
+			bottom: -34%
+			left: 33%
 		@media (max-width: 800px)
-			bottom: 190%
-			left: -10%
+			bottom: 264%
+			left: 105%
 		@media (max-width: 600px)
 			bottom: 210%
 			left: 40%
 			font-size: 20px
 		@media (max-width: 600px)
 			bottom: 220%
+		@media (max-width: 380px)
+			bottom: 237%
+			left: 53%
+			transform: rotate(-26deg)
 	& .transform_div
 		@include trans(37px,22deg)
 		bottom: 5%
@@ -164,8 +234,9 @@
 		@media (max-width: 1791px)
 			top: -55%
 		@media (max-width: 1024px)
-			top: -80%
-			left: 80%
+			top: -63%
+			left: 89%
+			transform: rotate(-15deg)
 		@media (max-width: 997px)
 			top: -80%
 			left: 90%
@@ -176,5 +247,8 @@
 		@media (max-width: 600px)
 			top: -125%
 			left: 70%
-		@media (max-width: 375px)
-			top: -135%
+		@media (max-width: 380px)
+			top: -125%
+			left: 82%
+			font-size: 15px
+			transform: rotate(18deg)

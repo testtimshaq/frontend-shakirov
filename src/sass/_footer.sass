@@ -6,67 +6,139 @@ $cr_2: #ff8f5a
 		display: flex
 		align-items: center
 		justify-content: space-between
+		@media (max-width: 1024px)
+			height: 285px
 		@media (max-width: 800px)
 			height: 450px
 			align-items: flex-start
 			flex-direction: column
 			justify-content: space-evenly
+		@media (max-width: 783px)
+			justify-content: flex-start
 	& .navigation
+		height: 87px
 		display: flex
 		flex-direction: column
-		align-items: flex-start
+		font-size: 18px
+		@media (max-width: 1024px)
+			height: 72px
+		@media (max-width: 783px)
+			height: 75px
+			font-size: 15px
+			margin-top: 46px
 		& a 
 			text-decoration: none
 			color: #8993ad
-			margin-bottom: 20px
+			margin-bottom: 9px
+			@media (max-width: 1024px)
+				margin-bottom: 11px
+			@media (max-width: 783px)
+				margin-bottom: 15px
 			&:hover
 				color: $cr_1
 	& .contacts
 		display: flex
 		flex-direction: column
-		height: 85px
+		height: 90px
 		width: 288px
 		justify-content: space-between
-		& h4
+		margin-left: 90px
+		@media (max-width: 1024px)
+			height: 76px
+			margin-left: 54px
+		@media (max-width: 783px)
+			margin-left: 0
+			font-size: 20px
+			margin-top: 51px
+			height: 71px
+		& .h4_tel
 			margin: 0
 			font-size: 25px
-			font-weight: 100
+			font-weight: 400
+			@media (max-width: 783px)
+				font-size: 20px
+		& .h4_mailto
+			margin: 0
+			font-size: 25px
+			font-weight: 400
+			@media (max-width: 1024px)
+				margin: 29px 0 0 0
+			@media (max-width: 783px)
+				font-size: 20px
+				margin: 0
 		& .link_tel:before 
 			content: '\E100'
 			font-family: LigatureSymbols
-			margin-right: 22px
-			font-size: 25px
+			margin-right: 18px
+			font-size: 30px
 			color: transparent
-			background: linear-gradient(to top, $cr_2, $cr_1)
+			background-image: linear-gradient(to top, #f26522 0%, #fa0891 99%, #fa0891 100%)
 			background-clip: text
 			-webkit-background-clip: text
+			@media (max-width: 1024px)
+				font-size: 23px
+				margin-right: 22px
+			@media (max-width: 783px)
+				font-size: 20px
+				margin-right: 18px
 		& .link_mailto:before
 			content: '\E08a'
 			font-family: LigatureSymbols
-			font-size: 25px
+			font-size: 30px
 			margin-right: 22px
 			color: transparent
-			background: linear-gradient(to top, #ff8f5a, #ff2f96)
+			background-image: linear-gradient(to top, #f26522 0%, #fa0891 99%, #fa0891 100%)
 			background-clip: text
 			-webkit-background-clip: text
+			@media (max-width: 1024px)
+				font-size: 23px
+				margin-right: 27px
+			@media (max-width: 783px)
+				font-size: 20px
+				margin-right: 18px
 	& .social
 		display: flex
 		flex-direction: column
-		width: 248px
-		height: 105px
+		justify-content: space-between
+		width: 270px
+		height: 123px
+		margin: 20px 0 0 0
+		justify-content: flex-start
+		@media (max-width: 1024px)
+			width: 248px
+			margin-top: 37px
+		@media (max-width: 783px)
+			margin-top: 24px
+			height: 150px
 		& .button_call
+			width: 250px
+			@media (max-width: 1024px)
+				width: 248px
 			@media (max-width: 800px)
 				display: none
+			@media (max-width: 783px)
+				display: block
+				width: 280px
+				background-color: #ff4e2e
+				color: white
+				border: 0
+				height: 55px
 	& .sprite
-		margin-top: 20px
+		margin-top: 32px
+		@media (max-width: 1024px)
+			margin: 32px 0 0 0
+		@media (max-width: 783px)
+			margin: 50px 0 0
 		& .link_vk
 			background-position: left top
-			margin: 0 30px 0 0
+			margin: 0 15px 0 0
+			@media (max-width: 1024px)
+				margin: 0 17px 0 0
 		& .link_fb
 			background-position: -56px top
-			margin: 0 30px 0 0
+			margin: 0 15px 0 0
 		& .link_tw
 			background-position: -108px top
-			margin: 0 30px 0 0
+			margin: 0 15px 0 0
 		& .link_in
 			background-position: -164px top

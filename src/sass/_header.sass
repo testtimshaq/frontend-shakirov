@@ -31,9 +31,14 @@
 		& .menu-burger
 			@media (max-width: 1024px)
 				display: block
+				width: 45px
+				margin-top: 3px
 			@media (max-width: 800px)
 				width: 24px
 				height: 18px
+			@media (max-width: 380px)
+				position: absolute
+				top: 2px
 		& .menu-close
 			@media (max-width: 800px)
 				height: 18px
@@ -44,13 +49,16 @@
 		align-items: center
 		@media (max-width: 1024px)
 			width: 60%
-			justify-content: normal
 		@media (max-width: 997px)
-			width: 80%
+			width: 90%
 		@media (max-width: 800px)
 			width: 75%
 			justify-content: space-between
+		@media (max-width: 380px)
+			width: 90%
 		& .button_call
+			@media (max-width: 1024px)
+				margin-top: 4px
 			@media (max-width: 800px)
 				display: none
 		& .tel-link

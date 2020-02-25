@@ -9,20 +9,16 @@ const imagemin = require('gulp-imagemin');
 const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
 
-const cssFiles = [
-    './src/css/main.css'
-]
-
-
 const jsFiles = [
     './src/js/popup.js',
     './src/js/button.js',
     './src/js/slider.js'
 ]
 
-
-function styles() {
-    return gulp.src(cssFiles)
+function presass() {
+    return gulp.src('./src/sass/main.sass')
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
     .pipe(concat('styles.css'))
     .pipe(autopref({
         browserlist: ['> 1%'],
@@ -31,11 +27,10 @@ function styles() {
     .pipe(cleanCSS({
         level: 2 
     }))
-    .pipe(gulp.dest('./build/css'))
+    .pipe(sourcemaps.write('../../'))
+    .pipe(gulp.dest('./build/css/'))
     .pipe(browserSync.stream())
 }
-
-
 
 function scripts() {
     return gulp.src(jsFiles)
@@ -63,22 +58,12 @@ function clean() {
   .pipe(browserSync.stream())
 }
 
-function presass() {
-    return gulp.src('./src/sass/main.sass')
-    .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
-    .pipe(sourcemaps.write('../../'))
-    .pipe(gulp.dest('./src/css'))
-    .pipe(browserSync.stream())
-}
-
 function watch() {
     browserSync.init({
         server: {
             baseDir: "./"
         }
     });
-    gulp.watch('./src/css/**/*.css', styles)
     gulp.watch('./src/sass/**/*.sass', presass)
     gulp.watch('./src/js/**/*.js', scripts)
     gulp.watch('./src/img/**/*', compress)
@@ -86,11 +71,9 @@ function watch() {
 }
 
 
-
-gulp.task('styles', styles);
 gulp.task('scripts', scripts);
 gulp.task('watch', watch);
-gulp.task('build', gulp.series(clean, presass, gulp.parallel(styles, scripts, compress)));
+gulp.task('build', gulp.series(clean, gulp.parallel(presass, scripts, compress)));
 gulp.task('dev', gulp.series('build', 'watch'));
 gulp.task('del', clean);
 gulp.task('compress', compress);

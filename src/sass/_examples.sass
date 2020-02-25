@@ -9,32 +9,52 @@ $cr_1: #ff2f96
 	align-items: center
 	@media (max-width: 1366px)
 		height: 1050px
+	@media (max-width: 1024px)
+		height: 1047px
 	@media (max-width: 800px)
 		height: 700px
+	@media (max-width: 320px)
+		height: 612px
 	& .headliner
 		padding-top: 84px
 		margin-bottom: 95px
+		@media (max-width: 1024px)
+			padding-top: 90px
+			margin-bottom: 95px
 		@media (max-width: 800px)
 			width: 218px
 			font-size: 30px
 			text-align: center
 			padding-top: 50px
 			margin-bottom: 50px
+		@media (max-width: 320px)
+			padding-top: 0
+			margin-bottom: 40px
 	& .album
 		height: 350px
 		display: flex
 		position: relative
 		@media (max-width: 1366px)
 			justify-content: center
+		@media (max-width: 1024px)
+			height: 408px
+			width: 948px
 		@media (max-width: 997px)
 			height: 400px
 		@media (max-width: 800px)
 			display: block
 			position: static
+			width: 320px
+			height: 362px
 		& img 
-			margin-bottom: 15px
+			margin-bottom: 40px
+			@media (max-width: 1024px)
+				width: 456px
+				margin-bottom: 22px
 			@media (max-width: 800px)
 				width: 320px
+				height: 250px
+				margin-bottom: 16px
 			@media (max-width: 384px)
 				width: 280px
 		& a 
@@ -42,6 +62,10 @@ $cr_1: #ff2f96
 			color: gray
 			text-align: center
 			font-size: 20px
+			@media (max-width: 1024px)
+				font-size: 25px
+			@media (max-width: 800px)
+				font-size: 18px
 			&:hover
 				color: $cr_1
 	& .text_link
@@ -50,3 +74,9 @@ $cr_1: #ff2f96
 		justify-content: center
 		padding: 0 20px 0 0
 		font-size: 20px
+	& .examples__button_action
+		@media (max-width: 1024px)
+			margin: 191px 0 0 0
+		@media (max-width: 800px)
+			margin: 0
+			width: 280px

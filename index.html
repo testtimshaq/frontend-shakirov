@@ -2,11 +2,11 @@
 <html lang="ru">
 <head>
 	<!-- fonts preload -->
-	<link rel="preload" href="../../fonts/roboto-v20-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-	<link rel="preload" href="../../fonts/roboto-v20-latin_cyrillic-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+	<link rel="preload" href="/fonts/roboto-v20-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="/fonts/roboto-v20-latin_cyrillic-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
 
-	<link rel="preload" href="../../fonts/roboto-v20-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-	<link rel="preload" href="../../fonts/roboto-v20-latin_cyrillic-700.woff" as="font" type="font/woff" crossorigin="anonymous">
+	<link rel="preload" href="/fonts/roboto-v20-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="/fonts/roboto-v20-latin_cyrillic-700.woff" as="font" type="font/woff" crossorigin="anonymous">
 	<!-- fonts preload -->
 	<title>Дмитрий Алексеев — Frontend-разработчик и веб-верстальщик</title>
 	<meta charset="utf-8">
@@ -51,7 +51,7 @@
 
 		<!-- Phone number — start -->
 		<section id="phone-number" class="phone-number header__phone-number">
-			<a href="tel:+74999955577" class="phone-number__tel-link tel-link phone-number__tel-link_no-decoration">+7(499)995-55-77</a>
+			<a href="tel:+74999955577" class="phone-number__tel-link tel-link phone-number__tel-link_no-decoration">+7 (499) 995-55-77</a>
 			<button class="phone-number__button_call button_call">
 					Заказать звонок
 			</button>
@@ -73,7 +73,12 @@
 <!-- Present me — start-->
 <section class="present-me present-me_background_gray">
 	<div class="present-me_elipse elipse">
-		<svg xmlns="http://www.w3.org/2000/svg" width="814" height="630" viewBox="0 0 814 630">
+
+		<!-- <img src="img/ie_elipse_1920.png" class="elipse_1920">
+		<img src="img/ie_elipse_1024.png" class="elipse_1024"> -->
+
+		<!-- SVG 1920 -->
+		<svg class="svg_1920" xmlns="http://www.w3.org/2000/svg" width="814" height="630" viewBox="0 0 814 630">
 
 		<defs>
 			<linearGradient id="gradient" x1="371.97" x2="548.51" y1="763.68" y2=".74" gradientUnits="userSpaceOnUse">
@@ -87,18 +92,24 @@
 
 		<path fill="url(#gradient)" d="M395.52 40.407C502.261-10.05 602.994-10.204 687.212 27.67c84.435 37.567 152.356 113.165 198.491 207.114 44.27 94.884 44.223 196.799 8.068 279.242-36.656 83.673-97.666 146.755-180.805 191.777-44.03 22.669-90.312 38.198-149.148 47.731-58.06 9.394-128.676 12.79-203.493 7.944-148.474-9.32-314.876-53.081-349.967-151.79-19.887-49.012-7.404-105.197 17.32-161.739 25.13-56.624 62.503-113.604 101.74-166.115 39.645-52.593 81.155-100.717 123.891-141.53C296.45 99.41 340.817 65.828 395.52 40.408z"/>
 		</svg>
+
+		<!-- SVG 1024 -->
+		<svg class="svg_1024" id="SVGDoc" width="547" height="525" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 547 525"><defs><linearGradient id="LinearGradient1015" gradientUnits="userSpaceOnUse" x1="387.002721786499" y1="629.9911499023438" x2="532.0070552825928" y2="0.0157470703125"><stop stop-opacity="1" stop-color="#ff8f5a" offset="0"></stop><stop stop-opacity="1" stop-color="#ff2f96" offset="0.99"></stop><stop stop-opacity="1" stop-color="#ff2f96" offset="1"></stop></linearGradient></defs><desc>Generated with Avocode.</desc><g><g clip-path="url(#clip-4)"><title>Ellipse 1</title><path d="M394.81891,32.77108c106.68628,-41.66199 207.36761,-41.79038 291.54291,-10.51639c84.39252,31.02028 152.27881,93.44294 198.39026,171.01919c44.24689,78.34721 44.2002,162.50083 8.06329,230.57616c-36.63739,69.09019 -97.61633,121.17882 -180.71252,158.35389c-44.00806,18.71827 -90.26587,31.54161 -149.0722,39.41291c-58.03107,7.7566 -128.61072,10.56116 -203.38928,6.55979c-148.39801,-7.6967 -314.71484,-43.83094 -349.78864,-125.33599c-19.87616,-40.47131 -7.39966,-86.86455 17.31226,-133.55198c25.11725,-46.75571 62.46991,-93.80562 101.68817,-137.16511c39.62372,-43.42737 81.11304,-83.16411 123.82703,-116.86383c43.11938,-33.768 87.46332,-61.49878 142.13873,-82.48863z" fill="#6055c4" fill-opacity="1"></path><path d="M394.81891,32.77108c106.68628,-41.66199 207.36761,-41.79038 291.54291,-10.51639c84.39252,31.02028 152.27881,93.44294 198.39026,171.01919c44.24689,78.34721 44.2002,162.50083 8.06329,230.57616c-36.63739,69.09019 -97.61633,121.17882 -180.71252,158.35389c-44.00806,18.71827 -90.26587,31.54161 -149.0722,39.41291c-58.03107,7.7566 -128.61072,10.56116 -203.38928,6.55979c-148.39801,-7.6967 -314.71484,-43.83094 -349.78864,-125.33599c-19.87616,-40.47131 -7.39966,-86.86455 17.31226,-133.55198c25.11725,-46.75571 62.46991,-93.80562 101.68817,-137.16511c39.62372,-43.42737 81.11304,-83.16411 123.82703,-116.86383c43.11938,-33.768 87.46332,-61.49878 142.13873,-82.48863z" fill="url(#LinearGradient1015)"></path></g></g></svg>
+
+		<!-- SVG 320 -->
+		
+		<?xml version="1.0" encoding="UTF-8"?>
+<svg class="svg_320" id="SVGDoc" width="320" height="294" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 320 294"><defs><linearGradient id="LinearGradient1067" gradientUnits="userSpaceOnUse" x1="132.00141525268555" y1="389.9946041107178" x2="222.00361251831055" y2="-0.026025772094726562"><stop stop-opacity="1" stop-color="#ff8f5a" offset="0"></stop><stop stop-opacity="1" stop-color="#ff2f96" offset="0.99"></stop><stop stop-opacity="1" stop-color="#ff2f96" offset="1"></stop></linearGradient></defs><desc>Generated with Avocode.</desc><g><g clip-path="url(#clip-4)"><title>Ellipse 1</title><path d="M143.92046,20.25288c54.56205,-25.79309 106.05307,-25.87254 149.10246,-6.51058c43.16046,19.20476 77.87924,57.85073 101.46185,105.87859c22.62896,48.50509 22.60508,100.60495 4.12376,142.75065c-18.73732,42.77413 -49.9235,75.0224 -92.42102,98.03772c-22.50681,11.58851 -46.16423,19.52742 -76.2393,24.40064c-29.67857,4.80222 -65.77482,6.53856 -104.01846,4.0613c-75.89451,-4.76503 -160.95316,-27.13596 -178.8908,-77.5962c-10.16518,-25.05592 -3.78437,-53.77816 8.85393,-82.68259c12.84561,-28.94668 31.9487,-58.07554 52.0059,-84.91946c20.26457,-26.88617 41.48327,-51.48721 63.32829,-72.35093c22.05235,-20.90579 44.73097,-38.07427 72.69339,-51.06913z" fill="#6055c4" fill-opacity="1"></path><path d="M143.92046,20.25288c54.56205,-25.79309 106.05307,-25.87254 149.10246,-6.51058c43.16046,19.20476 77.87924,57.85073 101.46185,105.87859c22.62896,48.50509 22.60508,100.60495 4.12376,142.75065c-18.73732,42.77413 -49.9235,75.0224 -92.42102,98.03772c-22.50681,11.58851 -46.16423,19.52742 -76.2393,24.40064c-29.67857,4.80222 -65.77482,6.53856 -104.01846,4.0613c-75.89451,-4.76503 -160.95316,-27.13596 -178.8908,-77.5962c-10.16518,-25.05592 -3.78437,-53.77816 8.85393,-82.68259c12.84561,-28.94668 31.9487,-58.07554 52.0059,-84.91946c20.26457,-26.88617 41.48327,-51.48721 63.32829,-72.35093c22.05235,-20.90579 44.73097,-38.07427 72.69339,-51.06913z" fill="url(#LinearGradient1067)"></path></g></g></svg>
+
     </div>
 	<div class="present-me_pic pic">
-    	<img src="img/man.png">
+    	<img src="img/man.png" alt="Author">
 	</div>
 	<!-- About me — start -->
 	<div class="about about_fixed-container present-me__about">
 
 		<!-- Animation — start -->
 	<div class="animation present-me__animation">
-		<!-- <div class="div-open present-me__div-open">&lt;div&gt;</div>
-		<div class="div-text present-me__div-text">New block</div>
-		<div class="div-close present-me__div-close">&lt;/div&gt;</div> -->
 		<div class="transform_sharp present-me__transform_sharp">#</div>
 		<div class="transform_bracket present-me__transform_bracket">{ }</div>
 		<div class="transform_close-tag present-me__transform_close-tag">&lt;/&gt;</div>
@@ -127,22 +138,22 @@
 	<div class="headliner my-skills__headliner">Что я делаю</div>
 	<div class="fixed-container my-skills__fixed-container">
 		<div class="my-skills__annotation_first annotation_first">
-			<img src="img/image_tools.png" alt="" class="annotation__image">
+			<img src="img/image_tools.png" alt="imaga tools" class="annotation__image">
 			Вёрстка лендинг&mdash;страниц и&nbsp;сайтов любой сложности
 		</div>
 
 		<div class="my-skills__annotation_second annotation_second">
-			<img src="img/image_responsive.png" alt="" class="annotation__image">
+			<img src="img/image_responsive.png" alt="image responsive" class="annotation__image">
 			Адаптивная вёрстка под все браузеры и&nbsp;устройства
 		</div>
 
 		<div class="my-skills__annotation_third annotation_third">
-			<img src="img/image_programming.png" alt="" class="annotation__image">
+			<img src="img/image_programming.png" alt="image_programming" class="annotation__image">
 			Frontend&mdash;разработка и&nbsp;программирование
 		</div>
 
 		<div class="my-skills__annotation_fourth annotation_fourth">
-			<img src="img/image_coding.png" alt="" class="annotation__image">
+			<img src="img/image_coding.png" alt="image_coding" class="annotation__image">
 			Исправление и&nbsp;доработка существующей вёрстки
 		</div>
 	</div>
@@ -159,15 +170,13 @@
 	</div>
 
 	<div class="album album_fixed-container examples__album">
-		<!-- <img src="img/arrow.png" id="arrow-1" class="pointer" alt="arrow-left">
-		<img src="img/arrow-2.png" id="arrow-2" class="pointer" alt="arrow-right"> -->
 		<div class="photo examples__photo_1">
 			<a href=""><img src="img/news-site-2.jpg" alt="photo-left" class="photo__link_image" aria-label="siteName"></a>
 			<div class="examples__text-link text-link"><a>Сайт новостного агенства</a></div>
 		</div>
 		<div class="photo examples__photo_2">
 			<a href=""><img src="img/photo-2.jpg" alt="photo-center" class="photo__link_image" aria-label="siteName"></a>
-			<div class="examples__text-link text-link"><a>Сайт магазина детской одежды</a></div>
+			<div class="examples__text-link text-link"><a>Интернет-магазин детской одежды</a></div>
 		</div>
 		<div class="photo examples__photo_3">
 			<a href=""><img src="img/photo-3.jpg" alt="photo-right" class="photo__link_image" aria-label="siteName"></a>
@@ -177,21 +186,8 @@
 			<a href=""><img src="img/photo-1.jpg" alt="photo-left" class="photo__link_image" aria-label="siteName"></a>
 			<div class="examples__text-link text-link"><a>Сайт психолога Веры Антоновой</a></div>
 		</div>
-		<!-- <div class="photo examples__photo_5">
-			<a href=""><img src="img/photo-2.jpg" alt="photo-center" class="photo__link_image"></a>
-			<div class="examples__text-link"><a>Сайт магазина детской одежды</a></div>
-		</div>
-		<div class="photo examples__photo_6">
-			<a href=""><img src="img/photo-3.jpg" alt="photo-right" class="photo__link_image"></a>
-			<div class="examples__text-link"><a>Сайт магазина «Рыболов»</a></div>
-		</div> -->
+		
 	</div>
-
-	<!-- <div class="slider examples__slider">
-		<button class="slider__button_left"></button>
-		<button class="slider__button_center"></button>
-		<button class="slider__button_right"></button>				
-	</div> -->
 
 	<button class="examples__button_action" id="order-project">
 	Заказать проект
@@ -208,7 +204,7 @@
 	<div class="animation cost__animation">
 		<div class="cost__transform_div-open transform_div-open">&lt;div&gt;</div>
 		<div class="cost__transform_sharp transform_sharp ">#</div>
-		<div class="cost__transform_bracket transform_bracket">{ }</div>
+		<div class="cost__transform_bracket transform_bracket">{&nbsp;}</div>
 		<div class="cost__transform_bracket_clone transform_bracket_clone">{ }</div>
 		<div class="cost__transform_close-tag transform_close-tag">&lt;/&gt;</div>
 	</div>	
@@ -235,10 +231,10 @@
 		</nav>
 
 		<section class="contacts footer__contacts">
-			<h4>
-				<a href="tel:+74999955577" id="tel-foot" class="contacts__link_tel link_tel">+7(499)995-55-77</a>
+			<h4 class="contacts__h4_tel h4_tel">
+				<a href="tel:+74999955577" id="tel-foot" class="contacts__link_tel link_tel">+7 (499) 995-55-77</a>
 			</h4>
-			<h4>
+			<h4 class="contacts__h4_mailto h4_mailto">
 				<a href="mailto:dmitry@alekseev.com" target="_blank" id="post-foot" class="contacts__link_mailto link_mailto">dmitry@alekseev.com</a>
 			</h4>
 		</section>
@@ -256,9 +252,9 @@
 		</address>
 	</div>
 <!-- Scripts -->
-	<script src="jquery-3.4.1.min.js"></script>
-	<script src="slick/slick.min.js"></script>
-	<script src="build/js/script.js"></script>
+	<script src="jquery-3.4.1.min.js" defer></script>
+	<script src="slick/slick.min.js" defer></script>
+	<script src="build/js/script.js" defer></script>
 <!-- Scripts -->
 </footer>
 <!-- Footer — end -->
